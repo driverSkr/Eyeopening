@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.eye_openingJava">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 用于声明应用程序需要查询的其他应用程序的包名。应用程序可以查询设备上是否安装以下应用 -->
+    <queries>
+
+        <!-- 手机QQ -->
+        <package android:name="com.tencent.mobileqq" />
+        <!-- 微信 -->
+        <package android:name="com.tencent.mm" />
+        <!-- 新浪微博 -->
+        <package android:name="com.sina.weibo" />
+    </queries>
+
+    <application
+        android:name=".EyeopeningApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Eyeopening"
+        tools:ignore="UnusedAttribute"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Eyeopening.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- 关于全面屏与刘海，状态栏配置相关 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5ee21dfcdbc2ec078743b1f3" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="opensource" />
+    </application>
+
+</manifest>
