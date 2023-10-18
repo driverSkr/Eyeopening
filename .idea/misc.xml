@@ -3,7 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_baseline_more_horiz_30.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_into_blue_24dp.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_into_gray_24dp.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_navigate_before_black_44dp.xml" value="0.136" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_share_black_20dp.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_share_qq_black_30dp.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_share_qq_zone_black_30dp.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_share_wechat_black_30dp.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_share_weibo_black_30dp.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/shape_album_loading_bg.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/shape_follow_radius_black_2dp_bg.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/shape_time_radius_black_2dp_bg.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_web_view.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/fragment_share_dialog.xml" value="0.264" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_horizontal_scroll_card_type.xml" value="0.264" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_special_square_card_collection_type.xml" value="0.2" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_special_square_card_collection_type_item.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_text_card_type_footer_three.xml" value="0.2" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_text_card_type_footer_two.xml" value="0.2" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_text_card_type_header_eight.xml" value="0.2" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_text_card_type_header_five.xml" value="0.264" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_text_card_type_header_four.xml" value="0.264" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_text_card_type_header_seven.xml" value="0.264" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/layout_title_bar.xml" value="0.264" />
       </map>
     </option>
   </component>

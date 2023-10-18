@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import com.example.eyeOpeningKotlin.EyeopeningApplication
+import com.example.eyeOpeningKotlin.ui.common.ui.ShareDialogFragment
+import com.example.eyeOpeningKotlin.util.GlobalUtil
+import com.example.eyeOpeningKotlin.util.ShareUtil
 
 /**
  * 获取DataStore实例。
@@ -17,7 +20,8 @@ val dataStore: DataStore<Preferences> = EyeopeningApplication.context.dataStore
 /**
  * 获取SharedPreferences实例。
  */
-val sharedPreferences: SharedPreferences = EyeopeningApplication.context.getSharedPreferences(GlobalUtil.appPackage + "_preferences", Context.MODE_PRIVATE)
+val sharedPreferences: SharedPreferences = EyeopeningApplication.context.getSharedPreferences(
+    GlobalUtil.appPackage + "_preferences", Context.MODE_PRIVATE)
 
 /**
  * 批量设置控件点击事件。
