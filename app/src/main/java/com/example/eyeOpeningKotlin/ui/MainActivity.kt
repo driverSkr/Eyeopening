@@ -128,7 +128,7 @@ class MainActivity : BaseActivity() {
                     binding.navigationBar.ivHomePage.isSelected = true
                     binding.navigationBar.tvHomePage.isSelected = true
                     if (homePageFragment == null) {
-                        homePageFragment = HomePageFragment().newInstance()
+                        homePageFragment = HomePageFragment.newInstance()
                         add(R.id.homeActivityFragContainer, homePageFragment!!)
                     } else {
                         show(homePageFragment!!)

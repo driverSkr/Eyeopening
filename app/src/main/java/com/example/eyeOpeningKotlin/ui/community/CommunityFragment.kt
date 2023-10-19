@@ -9,4 +9,9 @@ import com.example.eyeOpeningKotlin.ui.common.ui.BaseViewPagerFragment
  * @since  2023/10/19
  */
 class CommunityFragment: BaseViewPagerFragment() {
+
+    companion object {
+
+        fun newInstance() = CommunityFragment()
+    }
 }

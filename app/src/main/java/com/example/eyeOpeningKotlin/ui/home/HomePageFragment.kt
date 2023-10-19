@@ -26,54 +26,8 @@ import org.greenrobot.eventbus.EventBus
  */
 class HomePageFragment: BaseViewPagerFragment() {
 
-    /*private var _binding: FragmentMainContainerBinding? = null
-
-    private val binding
-        get() = _binding!!
-
-    override val createTitles = ArrayList<CustomTabEntity>().apply {
-        add(TabEntity(GlobalUtil.getString(R.string.discovery)))
-        add(TabEntity(GlobalUtil.getString(R.string.commend)))
-        add(TabEntity(GlobalUtil.getString(R.string.daily)))
-    }
-
-    override val createFragments: Array<Fragment> = arrayOf(DiscoveryFragment.newInstance(), CommendFragment.newInstance(), DailyFragment.newInstance())
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        _binding = FragmentMainContainerBinding.inflate(layoutInflater, container, false)
-        return super.onCreateView(binding.root)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.titleBar.ivCalendar.visibility = View.VISIBLE
-        viewPager?.currentItem = 1
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
-    override fun onMessageEvent(messageEvent: MessageEvent) {
-        super.onMessageEvent(messageEvent)
-        if (messageEvent is RefreshEvent && this::class.java == messageEvent.activityClass) {
-            when (viewPager?.currentItem) {
-                0 -> EventBus.getDefault().post(RefreshEvent(DiscoveryFragment::class.java))
-                1 -> EventBus.getDefault().post(RefreshEvent(CommendFragment::class.java))
-                2 -> EventBus.getDefault().post(RefreshEvent(DailyFragment::class.java))
-            }
-        } else if (messageEvent is SwitchPagesEvent) {
-            when (messageEvent.activityClass) {
-                DiscoveryFragment::class.java -> viewPager?.currentItem = 0
-                CommendFragment::class.java -> viewPager?.currentItem = 1
-                DailyFragment::class.java -> viewPager?.currentItem = 2
-            }
-        }
-    }
-
     companion object {
 
         fun newInstance() = HomePageFragment()
-    }*/
+    }
 }

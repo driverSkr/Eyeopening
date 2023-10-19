@@ -100,7 +100,7 @@ class WebViewActivity: BaseActivity() {
         //UIWebChromeClient 类的 onReceivedTitle方法中设置的
         title = intent.getStringExtra(TITLE) ?: GlobalUtil.appName
         linkUrl = intent.getStringExtra(LINK_URL) ?: DEFAULT_URL
-        if (linkUrl == "")  linkUrl = DEFAULT_URL
+        //if (linkUrl == "")  linkUrl = DEFAULT_URL
         isShare = intent.getBooleanExtra(IS_SHARE,true)
         isTitleFixed = intent.getBooleanExtra(IS_TITLE_FIXED,false)
         mode = intent.getIntExtra(PARAM_MODE, MODE_DEFAULT)

@@ -87,7 +87,7 @@ class SplashActivity: BaseActivity() {
         lifecycleScope.launch {
             //3秒后跳转 并结束当前 Activity
             delay(splashDuration)
-            WebViewActivity.start(this@SplashActivity)
+            MainActivity.start(this@SplashActivity)
             finish()
         }
         //更改为不是首次登陆
