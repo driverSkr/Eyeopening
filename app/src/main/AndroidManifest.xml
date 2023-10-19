@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <queries>
+
         <!-- 手机QQ -->
         <package android:name="com.tencent.mobileqq" />
         <!-- 微信 -->
@@ -26,32 +27,58 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/EyeOpening"
-        tools:targetApi="31"
-        android:requestLegacyExternalStorage="true"
         tools:ignore="UnusedAttribute"
-        tools:replace="android:allowBackup">
+        tools:replace="android:allowBackup"
+        tools:targetApi="31">
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" /> <!-- 关于全面屏与刘海，状态栏配置相关 -->
         <meta-data
             android:name="android.max_aspect"
-            android:value="2.4" />
-        <!--适配华为（huawei）刘海屏-->
+            android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
         <meta-data
             android:name="android.notch_support"
-            android:value="true" />
-        <!--适配小米（xiaomi）刘海屏-->
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
         <meta-data
             android:name="notch.config"
             android:value="portrait|landscape" />
 
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:theme="@style/EyeOpening.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--android:configChanges：这是一个 Activity 的配置更改属性，用于指定在应用程序运行时哪些配置更改不应重新创建 Activity，而应由应用程序自行处理
+                                    keyboard：键盘配置更改。
+                                    keyboardHidden：键盘隐藏状态的更改。
+                                    orientation：屏幕方向更改。
+                                    screenSize：屏幕尺寸更改。
+                                    screenLayout：屏幕布局更改。
+                                    smallestScreenSize：最小屏幕尺寸更改。
+                                    uiMode：UI 模式更改。
+        android:screenOrientation="portrait"：这是 Activity 的屏幕方向属性。它指定了 Activity 的屏幕方向，
+                                              这里设置为 "portrait"，表示竖屏模式。这将锁定 Activity 在竖屏显示，不允许自动旋转为横屏-->
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
 
-        <provider
+        <activity
+            android:name=".ui.common.ui.WebViewActivity"
+            android:exported="true" />
+        <!--
+<provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="${applicationId}.androidx-startup"
             android:exported="false"
@@ -60,14 +87,13 @@
                 android:name="com.example.eye_openingKotlin.util.UmengInitializer"
                 android:value="androidx.startup" />
         </provider>
-
+        -->
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="5ee21dfcdbc2ec078743b1f3" />
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="opensource" />
-
     </application>
 
 </manifest>

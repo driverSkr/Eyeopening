@@ -27,6 +27,7 @@ import com.example.eyeOpeningKotlin.Const.ItemViewType.Companion.VIDEO_SMALL_CAR
 import com.example.eyeOpeningKotlin.R
 import com.example.eyeOpeningKotlin.extension.inflate
 import com.example.eyeOpeningKotlin.logic.model.*
+import com.example.eyeOpeningKotlin.ui.home.discovery.DiscoveryAdapter
 import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer
 import com.zhpan.bannerview.BannerViewPager
 

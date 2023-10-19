@@ -113,20 +113,27 @@ open class BaseActivity: AppCompatActivity() {
 
     override fun setContentView(layoutResID: Int) {
         super.setContentView(layoutResID)
+        //设置状态栏背景
         setStatusBarBackground(R.color.colorPrimaryDark)
         setupViews()
     }
 
     override fun setContentView(layoutView: View) {
         super.setContentView(layoutView)
+        //设置状态栏背景
         setStatusBarBackground(R.color.colorPrimaryDark)
         setupViews()
     }
 
+    //用于设置视图（Views）的初始化和配置
     protected open fun setupViews(){
+        //标题旁的返回按钮
         val navigateBefore = findViewById<ImageView>(R.id.ivNavigateBefore)
+        //页面的标题
         val tvTitle = findViewById<TextView>(R.id.tvTitle)
+        //返回或导航前一步
         navigateBefore?.setOnClickListener{ finish() }
+        //允许文本在 TextView 控件中水平滚动，以便显示长文本
         tvTitle?.isSelected = true  //获取焦点，实现跑马灯效果。
     }
 

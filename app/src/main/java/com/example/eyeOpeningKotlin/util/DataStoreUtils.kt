@@ -1,5 +1,6 @@
 package com.example.eyeOpeningKotlin.util
 
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import com.example.eyeOpeningKotlin.extension.dataStore
@@ -32,6 +33,17 @@ import kotlinx.coroutines.runBlocking
 
 object DataStoreUtils {
 
+    fun readBooleanData(key: String,default: Boolean = false): Boolean {
+        var value = false
+        runBlocking {
+            dataStore.data.first{
+                value = it[booleanPreferencesKey(key)] ?: default
+                true
+            }
+        }
+        return value
+    }
+
     fun readStringData(key: String,default: String = ""): String{
         var value = ""
         runBlocking {
@@ -41,6 +53,12 @@ object DataStoreUtils {
             }
         }
         return value
+    }
+
+    suspend fun saveBooleanData(key: String,value: Boolean){
+        dataStore.edit { mutablePreferences ->
+            mutablePreferences[booleanPreferencesKey(key)] = value
+        }
     }
 
     suspend fun saveStringData(key: String,value: String){
