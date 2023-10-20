@@ -61,6 +61,8 @@ object DataStoreUtils {
         }
     }
 
+    fun saveSyncBooleanData(key: String,value: Boolean) = runBlocking { saveBooleanData(key, value) }
+
     suspend fun saveStringData(key: String,value: String){
         dataStore.edit { mutablePreferences ->
             mutablePreferences[stringPreferencesKey(key)] = value

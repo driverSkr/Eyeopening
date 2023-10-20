@@ -1,6 +1,6 @@
 package com.example.eyeOpeningKotlin.ui.community
 
-import com.example.eyeOpeningKotlin.ui.common.ui.BaseViewPagerFragment
+import com.example.eyeOpeningKotlin.ui.common.ui.BaseFragment
 
 /**
  * 社区主界面。
@@ -8,7 +8,7 @@ import com.example.eyeOpeningKotlin.ui.common.ui.BaseViewPagerFragment
  * @author boge
  * @since  2023/10/19
  */
-class CommunityFragment: BaseViewPagerFragment() {
+class CommunityFragment: BaseFragment() {
 
     companion object {
 
