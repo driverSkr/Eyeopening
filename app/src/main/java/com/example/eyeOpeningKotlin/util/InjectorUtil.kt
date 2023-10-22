@@ -3,6 +3,7 @@ package com.example.eyeOpeningKotlin.util
 import com.example.eyeOpeningKotlin.logic.MainPageRepository
 import com.example.eyeOpeningKotlin.logic.dao.EyeOpeningDatabase
 import com.example.eyeOpeningKotlin.logic.network.EyeOpeningNetwork
+import com.example.eyeOpeningKotlin.ui.notification.push.PushViewModelFactory
 import com.example.eyeOpeningKotlin.ui.search.SearchViewModelFactory
 
 /**
@@ -26,9 +27,9 @@ object InjectorUtil {
     fun getCommunityCommendViewModelFactory() = com.example.eye_openingKotlin.ui.community.commend.CommendViewModelFactory(getMainPageRepository())
 
     fun getFollowViewModelFactory() = FollowViewModelFactory(getMainPageRepository())
-
-    fun getPushViewModelFactory() = PushViewModelFactory(getMainPageRepository())
 */
+    fun getPushViewModelFactory() = PushViewModelFactory(getMainPageRepository())
+
     fun getSearchViewModelFactory() = SearchViewModelFactory(getMainPageRepository())
 
     //fun getNewDetailViewModelFactory() = NewDetailViewModelFactory(getViedoRepository())
