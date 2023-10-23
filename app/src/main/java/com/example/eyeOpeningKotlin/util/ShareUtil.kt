@@ -15,7 +15,7 @@ const val SHARE_WECHAT_MEMORIES = 5
 /**
  * 调用系统原生分享工具类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 object ShareUtil {

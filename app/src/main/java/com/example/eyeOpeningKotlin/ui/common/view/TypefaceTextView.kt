@@ -10,7 +10,7 @@ import com.example.eyeOpeningKotlin.util.TypeFaceUtil
 /**
  * 带有自定义字体TextView。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 class TypefaceTextView: AppCompatTextView {

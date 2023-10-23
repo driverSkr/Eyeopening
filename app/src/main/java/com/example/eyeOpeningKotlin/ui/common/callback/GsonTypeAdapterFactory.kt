@@ -13,7 +13,7 @@ import kotlin.jvm.Throws
 /**
  * 处理gson解析时类型不匹配或者空值问题。https://www.jianshu.com/p/d8dcc656a06e。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 class GsonTypeAdapterFactory: TypeAdapterFactory {

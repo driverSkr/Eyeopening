@@ -18,7 +18,7 @@ import com.umeng.analytics.MobclickAgent
 /**
  * 关于界面。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/19
  */
 class AboutActivity: BaseActivity() {

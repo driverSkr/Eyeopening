@@ -6,7 +6,7 @@ import com.example.eyeOpeningKotlin.logic.MainPageRepository
 import com.example.eyeOpeningKotlin.logic.model.PushMessage
 import kotlinx.coroutines.flow.Flow
 
-class PushViewModel(val repository: MainPageRepository) : ViewModel() {
+class PushViewModel(private val repository: MainPageRepository) : ViewModel() {
 
     var dataList = ArrayList<PushMessage.Message>()
 

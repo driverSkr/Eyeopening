@@ -2,7 +2,6 @@ package com.example.eyeOpeningKotlin.ui
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
@@ -29,7 +28,7 @@ import org.greenrobot.eventbus.EventBus
 /**
  * EyeOpening的主界面。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/19
  */
 class MainActivity : BaseActivity() {
@@ -38,14 +37,16 @@ class MainActivity : BaseActivity() {
 
     private val binding: ActivityMainBinding get() = _binding!!
 
+    //用于跟踪上次按下返回按钮的时间，以实现双击返回按钮退出应用的功能
     private var backPressTime = 0L
 
+    /*首页界面*/
     private var homePageFragment: HomePageFragment? = null
-
+    /*社区界面*/
     private var communityFragment: CommunityFragment? = null
-
+    /*通知界面*/
     private var notificationFragment: NotificationFragment? = null
-
+    /*我的界面*/
     private var mineFragment: MineFragment? = null
 
     private val fragmentManager: FragmentManager by lazy { supportFragmentManager }
@@ -53,14 +54,16 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(binding.root)//调用了setupViews()方法
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        //释放 _binding，以避免内存泄漏。
         _binding = null
     }
 
+    //切换界面
     override fun setupViews() {
         observe()
         setOnClickListener(

@@ -8,7 +8,7 @@ import com.example.eyeOpeningKotlin.logic.model.VideoReplies
 /**
  * 视频相关，对应的Dao操作类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 class VideoDao {

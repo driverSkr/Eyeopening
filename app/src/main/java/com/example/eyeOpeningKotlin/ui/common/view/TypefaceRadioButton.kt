@@ -9,7 +9,7 @@ import com.example.eyeOpeningKotlin.R
 /**
  * 带有自定义字体RadioButton。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 class TypefaceRadioButton: AppCompatRadioButton {

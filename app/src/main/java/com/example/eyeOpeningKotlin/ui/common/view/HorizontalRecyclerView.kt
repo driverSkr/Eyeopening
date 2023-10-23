@@ -9,7 +9,7 @@ import kotlin.math.abs
 /**
  * 处理嵌套ViewPager时，横向滑动冲突。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 class HorizontalRecyclerView: RecyclerView {

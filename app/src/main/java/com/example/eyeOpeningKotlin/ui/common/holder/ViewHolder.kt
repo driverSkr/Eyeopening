@@ -34,7 +34,7 @@ import com.zhpan.bannerview.BannerViewPager
 /**
  * 项目通用ViewHolder，集中统一管理。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 

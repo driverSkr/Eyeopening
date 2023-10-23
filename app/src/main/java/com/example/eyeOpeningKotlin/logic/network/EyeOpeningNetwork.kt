@@ -6,7 +6,7 @@ import com.example.eyeOpeningKotlin.logic.network.api.VideoService
 /**
  * 管理所有网络请求。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 class EyeOpeningNetwork {

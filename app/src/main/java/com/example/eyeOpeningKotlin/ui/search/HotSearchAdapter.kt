@@ -15,7 +15,7 @@ import com.example.eyeOpeningKotlin.util.GlobalUtil
 /**
  * 热搜关键词Adapter
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 class HotSearchAdapter(val fragment: SearchFragment,var dataList: List<String>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {

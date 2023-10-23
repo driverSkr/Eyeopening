@@ -12,7 +12,7 @@ import retrofit2.http.Url
 /**
  * 与视频页面相关API请求。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 interface VideoService {

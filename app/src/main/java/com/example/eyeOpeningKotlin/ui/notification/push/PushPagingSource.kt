@@ -1,17 +1,22 @@
 package com.example.eyeOpeningKotlin.ui.notification.push
 
+import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import com.example.eyeOpeningKotlin.EyeopeningApplication
+import com.example.eyeOpeningKotlin.extension.logD
 import com.example.eyeOpeningKotlin.logic.model.PushMessage
 import com.example.eyeOpeningKotlin.logic.network.api.MainPageService
 import java.lang.Exception
 
-class PushPagingSource(private val mainPageService: MainPageService): PagingSource<String,PushMessage.Message>() {
+class PushPagingSource(val mainPageService: MainPageService): PagingSource<String,PushMessage.Message>() {
 
     override suspend fun load(params: LoadParams<String>): LoadResult<String, PushMessage.Message> {
         return try {
             val page = params.key ?: MainPageService.PUSHMESSAGE_URL
+            Log.d(EyeopeningApplication.name,"路径：$page")
             val repoResponse = mainPageService.getPushMessage(page)
+            Log.d(EyeopeningApplication.name,"响应数据：：$repoResponse")
             val repoItems = repoResponse.itemList
             val prevKey = null
             val nextKey = if (repoItems.isNotEmpty() && !repoResponse.nextPageUrl.isNullOrEmpty()) repoResponse.nextPageUrl else null

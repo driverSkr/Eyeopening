@@ -18,14 +18,14 @@ import java.util.*
 /**
  * 网络基础服务配置。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 object ServiceCreator {
 
     const val BASE_URL = "http://baobab.kaiyanapp.com/"
 
-    val httpClient = OkHttpClient.Builder()
+    val httpClient: OkHttpClient = OkHttpClient.Builder()
         .addInterceptor(LoggingInterceptor())
         .addInterceptor(HeaderInterceptor())
         .addInterceptor(BasicParamsInterceptor())

@@ -14,7 +14,7 @@ import com.example.eyeOpeningKotlin.R
 /**
  * PagingDataAdapter添加Footer
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/22
  */
 class FooterAdapter(val retry: () -> Unit) : LoadStateAdapter<FooterAdapter.ViewHolder>() {

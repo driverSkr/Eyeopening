@@ -24,7 +24,7 @@ import com.tencent.sonic.sdk.*
 /**
  * 展示网页共通界面。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 class WebViewActivity: BaseActivity() {

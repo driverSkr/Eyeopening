@@ -12,7 +12,7 @@ import com.shuyu.gsyvideoplayer.video.base.GSYVideoView
 /**
  * 常见列表，视频播放器。
  *
- * @author boge
+ * @author driverSkr
  * @since 2023/10/19
  */
 class AutoPlayerVideoPlayer: StandardGSYVideoPlayer {

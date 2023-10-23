@@ -6,7 +6,7 @@ import com.example.eyeOpeningKotlin.EyeopeningApplication
 /**
  * 自定义字体工具类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 object TypeFaceUtil {

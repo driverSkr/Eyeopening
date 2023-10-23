@@ -22,7 +22,7 @@ import com.scwang.smart.refresh.layout.simple.SimpleComponent
 /**
  * SmartRefreshLayout自定义Footer，上拉加载时没有文字和加载进度提示。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/5/29
  */
 class NoStatusFooter: SimpleComponent,RefreshFooter {

@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
 /**
  * 通知-推荐列表界面。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 class PushFragment: BaseFragment() {
@@ -34,7 +34,7 @@ class PushFragment: BaseFragment() {
     private val binding: FragmentRefreshLayoutBinding
         get() = _binding!!
 
-    private val viewModel by lazy { ViewModelProvider(this, InjectorUtil.getPushViewModelFactory()).get(PushViewModel::class.java) }
+    private val viewModel by lazy { ViewModelProvider(this, InjectorUtil.getPushViewModelFactory())[PushViewModel::class.java] }
 
     private lateinit var adapter: PushAdapter
 

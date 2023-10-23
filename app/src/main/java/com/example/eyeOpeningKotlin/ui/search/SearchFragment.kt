@@ -33,7 +33,7 @@ import com.umeng.analytics.MobclickAgent
 /**
  * 搜索界面。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 class SearchFragment: BaseFragment() {

@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.example.eyeOpeningKotlin.logic.MainPageRepository
 
-class SearchViewModel(val repository: MainPageRepository): ViewModel() {
+class SearchViewModel(private val repository: MainPageRepository): ViewModel() {
 
     var dataList = ArrayList<String>()
 

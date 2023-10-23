@@ -24,7 +24,7 @@ import java.lang.ref.WeakReference
 /**
  * 应用程序中所有Activity的基类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 open class BaseActivity: AppCompatActivity() {

@@ -21,7 +21,7 @@ import org.greenrobot.eventbus.EventBus
 /**
  * 通知主界面。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/19
  */
 class NotificationFragment: BaseViewPagerFragment() {

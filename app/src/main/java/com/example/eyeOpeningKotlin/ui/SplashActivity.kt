@@ -22,7 +22,7 @@ import kotlinx.coroutines.launch
 /**
  * 闪屏页面，应用程序首次启动入口。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/19
  */
 @SuppressLint("CustomSplashScreen")

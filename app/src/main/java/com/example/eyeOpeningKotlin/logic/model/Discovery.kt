@@ -3,7 +3,7 @@ package com.example.eyeOpeningKotlin.logic.model
 /**
  * 首页-发现列表，响应实体类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 data class Discovery(val itemList: List<Item>, val count: Int, val total: Int, val nextPageUrl: String?, val adExist: Boolean) : Model() {

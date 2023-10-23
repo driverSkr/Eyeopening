@@ -11,7 +11,7 @@ import java.net.UnknownHostException
 /**
  * 获取网络请求返回的异常信息。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/22
  */
 object ResponseHandler {

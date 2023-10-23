@@ -11,7 +11,7 @@ import com.example.eyeOpeningKotlin.ui.login.LoginActivity
 /**
  * 通知-互动列表界面。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 class InteractionFragment: BaseFragment() {

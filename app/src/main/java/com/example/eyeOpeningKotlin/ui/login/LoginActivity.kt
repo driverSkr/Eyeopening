@@ -15,7 +15,7 @@ import com.example.eyeOpeningKotlin.util.GlobalUtil
 /**
  * 登录界面。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/19
  */
 class LoginActivity: BaseActivity() {

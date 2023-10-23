@@ -19,7 +19,7 @@ import com.umeng.analytics.MobclickAgent
 /**
  * 分享对话框的弹出界面。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 class ShareDialogFragment: BottomSheetDialogFragment() {

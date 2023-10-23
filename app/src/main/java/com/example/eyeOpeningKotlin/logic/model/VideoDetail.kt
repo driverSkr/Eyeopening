@@ -4,7 +4,7 @@ package com.example.eyeOpeningKotlin.logic.model
  *
  * 视频详情-相关推荐+评论，响应实体类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 data class VideoDetail(val videoBeanForClient: VideoBeanForClient?, val videoRelated: VideoRelated?, val videoReplies: VideoReplies)

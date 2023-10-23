@@ -7,7 +7,7 @@ import kotlinx.parcelize.RawValue
 /**
  * 视频对应的具体信息，响应实体类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 data class VideoBeanForClient(

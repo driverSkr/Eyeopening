@@ -5,7 +5,7 @@ import com.example.eyeOpeningKotlin.logic.model.*
 /**
  * 主页界面（主要包含：首页，社区，通知，我的），对应的Dao操作类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 class MainPageDao {

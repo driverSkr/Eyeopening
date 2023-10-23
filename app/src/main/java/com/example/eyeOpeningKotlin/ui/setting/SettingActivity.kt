@@ -13,7 +13,7 @@ import com.example.eyeOpeningKotlin.util.GlobalUtil
 /**
  * 设置界面
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/19
  */
 class SettingActivity: BaseActivity() {

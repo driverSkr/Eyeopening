@@ -8,7 +8,7 @@ import java.util.Locale
 /**
  * 时间和日期工具类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/22
  */
 object DateUtil {

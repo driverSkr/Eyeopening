@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 /**
  * 通知-推送消息列表，响应实体类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 data class PushMessage(@SerializedName("messageList") val itemList: List<Message>, val nextPageUrl: String?, val updateTime: Long) : Model() {

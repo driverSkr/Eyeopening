@@ -14,7 +14,7 @@ import com.example.eyeOpeningKotlin.logic.model.PushMessage
 import com.example.eyeOpeningKotlin.util.ActionUrlUtil
 import com.example.eyeOpeningKotlin.util.DateUtil
 
-class PushAdapter (val fragment: PushFragment) : PagingDataAdapter<PushMessage.Message, PushAdapter.ViewHolder>(DIFF_CALLBACK){
+class PushAdapter (private val fragment: PushFragment) : PagingDataAdapter<PushMessage.Message, PushAdapter.ViewHolder>(DIFF_CALLBACK){
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         getItem(position)?.run {

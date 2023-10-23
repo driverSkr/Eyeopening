@@ -19,7 +19,7 @@ import java.util.*
 /**
  * 应用程序全局的通用工具类，功能比较单一，经常被复用的功能，应该封装到此工具类当中，从而给全局代码提供方面的操作。
  *
- * @author boge
+ * @author driverSkr
  * @since 2023/10/18
  */
 object GlobalUtil {

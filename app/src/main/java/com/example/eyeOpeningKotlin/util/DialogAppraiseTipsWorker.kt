@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit
 /**
  * WorkManager组件，执行弹出框后台任务。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/19
  */
 class DialogAppraiseTipsWorker(val context: Context,params: WorkerParameters): Worker(context,params) {

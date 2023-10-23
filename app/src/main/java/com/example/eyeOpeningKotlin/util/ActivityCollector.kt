@@ -7,7 +7,7 @@ import java.util.*
 /**
  * 管理应用程序中所有Activity。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/18
  */
 object ActivityCollector {

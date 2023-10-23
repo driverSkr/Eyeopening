@@ -25,7 +25,7 @@ import org.greenrobot.eventbus.ThreadMode
 /**
  * 应用程序中所有Fragment的基类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/19
  */
 open class BaseFragment: Fragment(), RequestLifecycle {

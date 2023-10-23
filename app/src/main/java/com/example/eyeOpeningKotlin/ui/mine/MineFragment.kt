@@ -22,7 +22,7 @@ import com.umeng.analytics.MobclickAgent
 /**
  * 我的界面。
  *
- * @author boge
+ * @author driverSkr
  * @since  2020/4/29
  */
 class MineFragment: BaseFragment() {

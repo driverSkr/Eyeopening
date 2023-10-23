@@ -9,7 +9,7 @@ import com.example.eyeOpeningKotlin.R
 /**
  * 带有自定义字体EditText。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/19
  */
 class TypefaceEditText: AppCompatEditText {

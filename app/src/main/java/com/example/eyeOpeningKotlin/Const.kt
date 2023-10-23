@@ -1,9 +1,11 @@
 package com.example.eyeOpeningKotlin
 
-/*
-* 项目所有全局通用常量的管理类。
-* 2023/10/17
-* */
+/**
+ * 项目所有全局通用常量的管理类。
+ *
+ * @author driverSkr
+ * @since  2023/10/17
+ */
 interface Const {
 
     interface ItemViewType {

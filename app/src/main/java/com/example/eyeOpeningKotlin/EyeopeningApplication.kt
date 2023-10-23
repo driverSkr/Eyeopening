@@ -17,10 +17,12 @@ import com.shuyu.gsyvideoplayer.BuildConfig
 import com.shuyu.gsyvideoplayer.player.IjkPlayerManager
 import tv.danmaku.ijk.media.player.IjkMediaPlayer
 
-/*
-* 自定义Application，在这里进行全局的初始化操作
-* 2023/10/17
-* */
+/**
+ * 自定义Application，在这里进行全局的初始化操作
+ *
+ * @author driverSkr
+ * @since  2023/10/17
+ */
 class EyeopeningApplication: Application() {
 
     init {
@@ -65,5 +67,7 @@ class EyeopeningApplication: Application() {
     companion object{
         @SuppressLint("StaticFieldLeak")
         lateinit var context: Context
+
+        const val name = "driverSkr"
     }
 }

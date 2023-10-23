@@ -5,8 +5,10 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.example.eyeOpeningKotlin.Const
 import com.example.eyeOpeningKotlin.logic.dao.MainPageDao
+import com.example.eyeOpeningKotlin.logic.model.CommunityRecommend
 import com.example.eyeOpeningKotlin.logic.model.PushMessage
 import com.example.eyeOpeningKotlin.logic.network.EyeOpeningNetwork
+import com.example.eyeOpeningKotlin.ui.community.commend.CommendPagingSource
 import com.example.eyeOpeningKotlin.ui.notification.push.PushPagingSource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -15,7 +17,7 @@ import kotlinx.coroutines.flow.Flow
 /**
  * 主页界面，主要包含：（首页，社区，通知，我的），对应的仓库数据管理。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/20
  */
 class MainPageRepository private constructor(private val mainPageDao: MainPageDao,private val eyeOpeningNetwork: EyeOpeningNetwork){
@@ -26,6 +28,13 @@ class MainPageRepository private constructor(private val mainPageDao: MainPageDa
         return Pager(
             config = PagingConfig(Const.Config.PAGE_SIZE),
             pagingSourceFactory = { PushPagingSource(eyeOpeningNetwork.mainPageService) }
+        ).flow
+    }
+
+    fun getCommunityRecommendPagingData(): Flow<PagingData<CommunityRecommend.Item>> {
+        return Pager(
+            config = PagingConfig(Const.Config.PAGE_SIZE),
+            pagingSourceFactory = { CommendPagingSource(eyeOpeningNetwork.mainPageService) }
         ).flow
     }
 

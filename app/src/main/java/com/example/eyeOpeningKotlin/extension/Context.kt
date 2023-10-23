@@ -10,7 +10,7 @@ import com.example.eyeOpeningKotlin.EyeopeningApplication
 /**
  * 获取DataStore实例
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/17
  */
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore(
