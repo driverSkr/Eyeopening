@@ -12,6 +12,11 @@ import kotlinx.parcelize.Parcelize
 
 class NewDetailActivity {
 
+    private var _binding: ActivityNewDetailBinding? = null
+
+    private val binding: ActivityNewDetailBinding
+        get() = _binding!!
+
     @Parcelize
     data class VideoInfo(
         val videoId: Long, val playUrl: String, val title: String, val description: String, val category: String, val library: String,

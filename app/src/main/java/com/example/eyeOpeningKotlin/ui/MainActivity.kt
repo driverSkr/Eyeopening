@@ -40,13 +40,13 @@ class MainActivity : BaseActivity() {
     //用于跟踪上次按下返回按钮的时间，以实现双击返回按钮退出应用的功能
     private var backPressTime = 0L
 
-    /*首页界面*/
+    /**首页界面*/
     private var homePageFragment: HomePageFragment? = null
-    /*社区界面*/
+    /**社区界面*/
     private var communityFragment: CommunityFragment? = null
-    /*通知界面*/
+    /**通知界面*/
     private var notificationFragment: NotificationFragment? = null
-    /*我的界面*/
+    /**我的界面*/
     private var mineFragment: MineFragment? = null
 
     private val fragmentManager: FragmentManager by lazy { supportFragmentManager }
@@ -54,16 +54,19 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)//调用了setupViews()方法
+        /**getRoot()函数可以得到activity_main.xml中根元素的实例*/
+        setContentView(binding.root)/**调用了setupViews()方法*/
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        //释放 _binding，以避免内存泄漏。
+        /**释放 _binding，以避免内存泄漏。*/
         _binding = null
     }
 
-    //切换界面
+    /**
+     * 切换界面
+     */
     override fun setupViews() {
         observe()
         setOnClickListener(

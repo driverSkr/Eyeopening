@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackAlpha50"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.newdetail.NewDetailActivity">
+
+    <ImageView
+        android:id="@+id/ivBlurredBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        tools:src="@drawable/bg_splash" />
+
+    <com.example.eyeOpeningKotlin.ui.newdetail.NewDetailVideoPlayer
+        android:id="@+id/videoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/videoPlayerSize" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlComment"
+        android:layout_below="@id/videoPlayer"
+        android:background="@color/blackAlpha55">
+
+        <com.example.eyeOpeningKotlin.ui.common.view.TypefaceTextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="8dp"
+            android:text="@string/pull_down_close_page"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:typeface="fzlLTypeface" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_new_detail_custom_header_type" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

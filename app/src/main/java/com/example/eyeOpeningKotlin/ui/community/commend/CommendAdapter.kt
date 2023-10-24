@@ -27,19 +27,31 @@ import com.zhpan.bannerview.BaseBannerAdapter
 import com.zhpan.bannerview.BaseViewHolder
 import de.hdodenhof.circleimageview.CircleImageView
 
+/**
+ * RecyclerView 适配器，用于在界面中显示社区推荐数据
+ * PagingDataAdapter<CommunityRecommend.Item, RecyclerView.ViewHolder>，这是 Paging 3 库中用于支持分页加载的适配器
+ */
 class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<CommunityRecommend.Item, RecyclerView.ViewHolder>(DIFF_CALLBACK) {
 
+    /**
+     * 用于确定特定位置的数据项的视图类型
+     */
     override fun getItemViewType(position: Int): Int {
         val item = getItem(position)
         return when (item?.type) {
+            /*horizontalScrollCard*/
             STR_HORIZONTAL_SCROLLCARD_TYPE -> {
                 when (item.data.dataType) {
+                    /*ItemCollection*/
                     STR_ITEM_COLLECTION_DATA_TYPE -> HORIZONTAL_SCROLLCARD_ITEM_COLLECTION_TYPE
+                    /*HorizontalScrollCard*/
                     STR_HORIZONTAL_SCROLLCARD_DATA_TYPE -> HORIZONTAL_SCROLLCARD_TYPE
                     else -> Const.ItemViewType.UNKNOWN
                 }
             }
+            /*communityColumnsCard*/
             STR_COMMUNITY_COLUMNS_CARD -> {
+                /*FollowCard*/
                 if (item.data.dataType == STR_FOLLOW_CARD_DATA_TYPE) FOLLOW_CARD_TYPE
                 else Const.ItemViewType.UNKNOWN
             }
@@ -47,14 +59,20 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
         }
     }
 
+    /**
+     * 据视图类型，它创建不同的 ViewHolder，并将其关联到相应的布局
+     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         HORIZONTAL_SCROLLCARD_ITEM_COLLECTION_TYPE -> {
+            /**主题创作广场+话题讨论大厅……*/
             HorizontalScrollcardItemCollectionViewHolder(R.layout.item_community_horizontal_scrollcard_item_collection_type.inflate(parent))
         }
         HORIZONTAL_SCROLLCARD_TYPE -> {
+            /**轮播图*/
             HorizontalScrollcardViewHolder(R.layout.item_community_horizontal_scrollcard_type.inflate(parent))
         }
         FOLLOW_CARD_TYPE -> {
+            /**卡片视图*/
             FollowCardViewHolder(R.layout.item_community_columns_card_follow_card_type.inflate(parent))
         }
         else -> {
@@ -62,6 +80,9 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
         }
     }
 
+    /**
+     * 根据数据项的类型，它设置不同的数据和视图
+     */
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = getItem(position)!!
         when (holder) {
@@ -82,7 +103,7 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
                     if (item.data.itemList.size == 1) setPageMargin(0) else setPageMargin(dp2px(4f))
                     setIndicatorVisibility(View.GONE)
                     removeDefaultPageTransformer()
-                    setAdapter(BannerAdapter())
+                    adapter = BannerAdapter()
                     setOnPageClickListener { position ->
                         ActionUrlUtil.process(fragment, item.data.itemList[position].data.actionUrl, item.data.itemList[position].data.title)
                     }
@@ -137,7 +158,7 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
             }
             else -> {
                 holder.itemView.gone()
-                if (com.shuyu.gsyvideoplayer.BuildConfig.DEBUG) "${TAG}:${Const.Toast.BIND_VIEWHOLDER_TYPE_WARN}\n${holder}".showToast()
+                if (BuildConfig.DEBUG) "${TAG}:${Const.Toast.BIND_VIEWHOLDER_TYPE_WARN}\n${holder}".showToast()
             }
         }
     }
@@ -164,6 +185,7 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
     class HorizontalScrollcardItemCollectionViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
     }
+
 
     class SquareCardOfCommunityContentAdapter(val fragment: CommendFragment, var dataList: List<CommunityRecommend.ItemX>) :
         RecyclerView.Adapter<SquareCardOfCommunityContentAdapter.ViewHolder>() {

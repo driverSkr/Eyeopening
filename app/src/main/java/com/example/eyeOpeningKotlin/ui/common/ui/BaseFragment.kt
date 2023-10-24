@@ -135,7 +135,7 @@ open class BaseFragment: Fragment(), RequestLifecycle {
     /**
      * 开始加载，将加载等待控件显示。
      */
-    @CallSuper
+    @CallSuper//作用是提醒开发人员，在扩展这些回调方法时，确保调用父类的相应方法，以便父类的关键逻辑也能得到执行
     override fun startLoading() {
         loading?.visibility = View.VISIBLE
         hideLoadErrorView()

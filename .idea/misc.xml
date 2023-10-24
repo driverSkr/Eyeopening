@@ -18,6 +18,8 @@
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_pause_white_24dp.xml" value="0.1365" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_person_white_18dp.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_play_white_24dp.xml" value="0.1365" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_refresh_white_24dp.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_reply_gray_20dp.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_search_black_17dp.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_search_gray_17dp.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_share_black_20dp.xml" value="0.1" />
@@ -26,8 +28,11 @@
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_share_qq_zone_black_30dp.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_share_wechat_black_30dp.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_share_weibo_black_30dp.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_star_gray_20dp.xml" value="0.1315" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/ic_star_white_15dp.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/layerlist_video_progress_bg.xml" value="0.1365" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/sel_pause_white_bg.xml" value="0.1315" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/sel_play_white_bg.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/shape_album_loading_bg.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/shape_choiceness_radius_black_2dp_bg.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/shape_dialog_radius_white_6dp_bg.xml" value="0.1" />
@@ -36,8 +41,11 @@
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/shape_label_radius_black_alpha_70_2dp_bg.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/shape_search_edit_text_bg.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/drawable/shape_time_radius_black_2dp_bg.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_about.xml" value="0.225" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_new_detail.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_open_source_projects.xml" value="0.225" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_setting.xml" value="0.2" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_splash.xml" value="0.264" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_web_view.xml" value="0.1" />
@@ -54,9 +62,11 @@
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_banner_type.xml" value="0.2" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_brief_card_tag_brief_card_type.xml" value="0.4" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_brief_card_topic_brief_card_type.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_community_auto_play_follow_card_follow_card_type.xml" value="0.264" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_community_columns_card_follow_card_type.xml" value="0.264" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_community_follow_header_type.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_community_horizontal_scroll_card_itemcollection_item_type.xml" value="0.264" />
-        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_community_horizontal_scrollcard_item_collection_type.xml" value="0.2" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_community_horizontal_scrollcard_item_collection_type.xml" value="0.264" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_community_horizontal_scrollcard_type.xml" value="0.2" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_follow_card_type.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_horizontal_scroll_card_type.xml" value="0.264" />
@@ -76,9 +86,12 @@
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_video_small_card_type.xml" value="0.4" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/layout_auto_play_video_player.xml" value="0.10648148148148148" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/layout_bottom_navigation_bar.xml" value="0.17708333333333334" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/layout_load_error_view.xml" value="0.225" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/layout_main_page_title_bar.xml" value="0.264" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/layout_new_detail_video_player.xml" value="0.264" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/layout_srl_classics_footer.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/layout_title_bar.xml" value="0.264" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/layout_view_stub_holder.xml" value="0.225" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1345" />
       </map>

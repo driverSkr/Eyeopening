@@ -25,29 +25,36 @@ import org.greenrobot.eventbus.EventBus
  */
 class CommunityFragment: BaseViewPagerFragment() {
 
+    /**定义选项卡的标题*/
     override val createTitles = ArrayList<CustomTabEntity>().apply {
         add(TabEntity(GlobalUtil.getString(R.string.commend)))
         add(TabEntity(GlobalUtil.getString(R.string.follow)))
     }
 
+    /**创建了一个包含两个 Fragment 对象的数组*/
     override val createFragments: Array<Fragment> = arrayOf(CommendFragment.newInstance(), FollowFragment.newInstance())
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return super.onCreateView(inflater.inflate(R.layout.fragment_main_container,container,false))
     }
 
+    /**
+     * 处理不同类型的事件
+     */
     override fun onMessageEvent(messageEvent: MessageEvent) {
-        super.onMessageEvent(messageEvent)
+        super.onMessageEvent(messageEvent)//在处理事件之前会先执行父类的事件处理逻辑
+        /**刷新事件*/
         if (messageEvent is RefreshEvent && this::class.java == messageEvent.activityClass) {
             when (viewPager?.currentItem) {
                 0 -> EventBus.getDefault().post(RefreshEvent(CommendFragment::class.java))
                 1 -> EventBus.getDefault().post(RefreshEvent(FollowFragment::class.java))
             }
-        } else if (messageEvent is SwitchPagesEvent) {
+        }
+        /**页面切换事件*/
+        else if (messageEvent is SwitchPagesEvent) {
             when (messageEvent.activityClass) {
                 CommendFragment::class.java -> viewPager?.currentItem = 0
                 else -> {
-                    
                 }
             }
         }

@@ -18,7 +18,7 @@ class SearchViewModel(private val repository: MainPageRepository): ViewModel() {
                 val hotSearch = repository.refreshHotSearch()
                 Result.success(hotSearch)
             } catch (e: Exception) {
-                Result.failure<List<String>>(e)
+                Result.failure(e)
             }
             emit(result)
         }

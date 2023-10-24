@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!--ViewStub:用于在布局中延迟加载另一个布局-->
     <ViewStub
         android:id="@+id/loadErrorView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout="@layout/layout_load_error_view" />
-
+        <!--android:layout：这个属性指定了要在需要时加载的布局资源文件-->
 </merge>

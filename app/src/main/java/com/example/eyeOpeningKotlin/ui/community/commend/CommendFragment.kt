@@ -23,7 +23,6 @@ import com.example.eyeOpeningKotlin.util.GlobalUtil
 import com.example.eyeOpeningKotlin.util.InjectorUtil
 import com.example.eyeOpeningKotlin.util.ResponseHandler
 import com.scwang.smart.refresh.layout.constant.RefreshState
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 /**
@@ -66,7 +65,7 @@ class CommendFragment: BaseFragment() {
 
     private lateinit var adapter: CommendAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentRefreshLayoutBinding.inflate(layoutInflater,container,false)
         return super.onCreateView(binding.root)
     }
