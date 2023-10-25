@@ -35,7 +35,8 @@ class CommendFragment: BaseFragment() {
 
     private var _binding: FragmentRefreshLayoutBinding? = null
 
-    private val binding get() = _binding!!
+    private val binding
+        get() = _binding!!
 
     /**
      * 列表左or右间距
@@ -75,6 +76,7 @@ class CommendFragment: BaseFragment() {
         adapter = CommendAdapter(this)
         val mainLayoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
         mainLayoutManager.gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_NONE
+        binding.recyclerView.layoutManager = mainLayoutManager
         binding.recyclerView.adapter = adapter.withLoadStateFooter(FooterAdapter(adapter::retry))
         binding.recyclerView.addItemDecoration(CommendAdapter.ItemDecoration(this))
         binding.recyclerView.setHasFixedSize(true)

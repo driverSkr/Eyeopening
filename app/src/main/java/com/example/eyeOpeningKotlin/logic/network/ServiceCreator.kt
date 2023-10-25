@@ -13,6 +13,7 @@ import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
+import java.io.IOException
 import java.util.*
 
 /**
@@ -43,6 +44,7 @@ object ServiceCreator {
 
     class LoggingInterceptor: Interceptor {
 
+        @Throws(IOException::class)
         override fun intercept(chain: Interceptor.Chain): Response {
             val originalRequest = chain.request()
             val t1 = System.nanoTime()

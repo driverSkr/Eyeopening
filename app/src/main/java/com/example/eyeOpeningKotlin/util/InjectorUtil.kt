@@ -1,9 +1,13 @@
 package com.example.eyeOpeningKotlin.util
 
 import com.example.eyeOpeningKotlin.logic.MainPageRepository
+import com.example.eyeOpeningKotlin.logic.VideoRepository
 import com.example.eyeOpeningKotlin.logic.dao.EyeOpeningDatabase
 import com.example.eyeOpeningKotlin.logic.network.EyeOpeningNetwork
 import com.example.eyeOpeningKotlin.ui.community.follow.FollowViewModelFactory
+import com.example.eyeOpeningKotlin.ui.home.daily.DailyViewModelFactory
+import com.example.eyeOpeningKotlin.ui.home.discovery.DiscoveryViewModelFactory
+import com.example.eyeOpeningKotlin.ui.newdetail.NewDetailViewModelFactory
 import com.example.eyeOpeningKotlin.ui.notification.push.PushViewModelFactory
 import com.example.eyeOpeningKotlin.ui.search.SearchViewModelFactory
 
@@ -17,14 +21,14 @@ object InjectorUtil {
 
     private fun getMainPageRepository() = MainPageRepository.getInstance(EyeOpeningDatabase.getMainPageDao(), EyeOpeningNetwork.getInstance())
 
-    /*private fun getViedoRepository() = VideoRepository.getInstance(EyepetizerDatabase.getVideoDao(), EyepetizerNetwork.getInstance())
+    private fun getVideoRepository() = VideoRepository.getInstance(EyeOpeningDatabase.getVideoDao(), EyeOpeningNetwork.getInstance())
 
     fun getDiscoveryViewModelFactory() = DiscoveryViewModelFactory(getMainPageRepository())
 
-    fun getHomePageCommendViewModelFactory() = com.example.eye_openingKotlin.ui.home.commend.CommendViewModelFactory(getMainPageRepository())
+    fun getHomePageCommendViewModelFactory() = com.example.eyeOpeningKotlin.ui.home.commend.CommendViewModelFactory(getMainPageRepository())
 
     fun getDailyViewModelFactory() = DailyViewModelFactory(getMainPageRepository())
-*/
+
     fun getCommunityCommendViewModelFactory() = com.example.eyeOpeningKotlin.ui.community.commend.CommendViewModelFactory(getMainPageRepository())
 
     fun getFollowViewModelFactory() = FollowViewModelFactory(getMainPageRepository())
@@ -33,5 +37,5 @@ object InjectorUtil {
 
     fun getSearchViewModelFactory() = SearchViewModelFactory(getMainPageRepository())
 
-    //fun getNewDetailViewModelFactory() = NewDetailViewModelFactory(getViedoRepository())
+    fun getNewDetailViewModelFactory() = NewDetailViewModelFactory(getVideoRepository())
 }

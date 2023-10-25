@@ -5,12 +5,12 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.example.eyeOpeningKotlin.Const
 import com.example.eyeOpeningKotlin.logic.dao.MainPageDao
-import com.example.eyeOpeningKotlin.logic.model.CommunityRecommend
-import com.example.eyeOpeningKotlin.logic.model.Follow
-import com.example.eyeOpeningKotlin.logic.model.PushMessage
+import com.example.eyeOpeningKotlin.logic.model.*
 import com.example.eyeOpeningKotlin.logic.network.EyeOpeningNetwork
 import com.example.eyeOpeningKotlin.ui.community.commend.CommendPagingSource
 import com.example.eyeOpeningKotlin.ui.community.follow.FollowPagingSource
+import com.example.eyeOpeningKotlin.ui.home.daily.DailyPagingSource
+import com.example.eyeOpeningKotlin.ui.home.discovery.DiscoveryPagingSource
 import com.example.eyeOpeningKotlin.ui.notification.push.PushPagingSource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -54,6 +54,27 @@ class MainPageRepository private constructor(private val mainPageDao: MainPageDa
         return Pager(
             config = PagingConfig(Const.Config.PAGE_SIZE),
             pagingSourceFactory = { FollowPagingSource(eyeOpeningNetwork.mainPageService) }
+        ).flow
+    }
+
+    fun getDiscoveryPagingData(): Flow<PagingData<Discovery.Item>> {
+        return Pager(
+            config = PagingConfig(Const.Config.PAGE_SIZE),
+            pagingSourceFactory = { DiscoveryPagingSource(eyeOpeningNetwork.mainPageService) }
+        ).flow
+    }
+
+    fun getHomePageRecommendPagingData(): Flow<PagingData<HomePageRecommend.Item>> {
+        return Pager(
+            config = PagingConfig(Const.Config.PAGE_SIZE),
+            pagingSourceFactory = { com.example.eyeOpeningKotlin.ui.home.commend.CommendPagingSource(eyeOpeningNetwork.mainPageService) }
+        ).flow
+    }
+
+    fun getDailyPagingData(): Flow<PagingData<Daily.Item>> {
+        return Pager(
+            config = PagingConfig(Const.Config.PAGE_SIZE),
+            pagingSourceFactory = { DailyPagingSource(eyeOpeningNetwork.mainPageService) }
         ).flow
     }
 
