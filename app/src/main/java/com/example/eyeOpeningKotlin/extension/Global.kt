@@ -49,7 +49,7 @@ fun setOnClickListener(vararg v: View?,listener: View.OnClickListener){
  *
  * @param activity 上下文
  * @param shareContent 分享内容
- * @param shareType SHARE_MORE=0，SHARE_QQ=1，SHARE_WECHAT=2，SHARE_WEIBO=3，SHARE_QQZONE=4
+ * @param shareType SHARE_MORE=0，SHARE_QQ=1，SHARE_WECHAT=2，SHARE_WEIBO=3，SHARE_QQ_ZONE=4
  */
 fun share(activity: Activity,shareContent: String,shareType: Int){
     ShareUtil.share(activity,shareContent,shareType)

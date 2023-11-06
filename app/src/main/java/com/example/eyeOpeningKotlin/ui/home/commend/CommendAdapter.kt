@@ -209,7 +209,7 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<HomePage
         RecyclerView.Adapter<InformationCardFollowCardAdapter.ViewHolder>() {
 
         inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val tvNews = view.findViewById<TextView>(R.id.tvNews)
+            val tvNews: TextView = view.findViewById(R.id.tvNews)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InformationCardFollowCardAdapter.ViewHolder {
@@ -271,17 +271,17 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<HomePage
                 //防止错位设置
                 setPlayTag(playTag)
                 //设置播放位置防止错位
-                setPlayPosition(position)
+                playPosition = position
                 //音频焦点冲突时是否释放
-                setReleaseWhenLossAudio(false)
+                isReleaseWhenLossAudio = false
                 //设置循环播放
-                setLooping(true)
+                isLooping = true
                 //增加封面
                 val cover = ImageView(activity)
                 cover.scaleType = ImageView.ScaleType.CENTER_CROP
                 cover.load(coverUrl, 4f)
                 cover.parent?.run { removeView(cover) }
-                setThumbImageView(cover)
+                thumbImageView = cover
                 //设置播放过程中的回调
                 setVideoAllCallBack(callBack)
                 //设置播放URL

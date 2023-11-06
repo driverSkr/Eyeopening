@@ -12,7 +12,7 @@ import com.example.eyeOpeningKotlin.extension.dp2px
 /**
  * 实现RecyclerView item之间分割线的效果。
  *
- * @author guolin
+ * @author guoLin
  * @since 18/3/27
  */
 class SimpleDividerDecoration(context: Context) : RecyclerView.ItemDecoration() {

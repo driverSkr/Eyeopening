@@ -40,12 +40,12 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
         val item = getItem(position)
         return when (item?.type) {
             /*horizontalScrollCard*/
-            STR_HORIZONTAL_SCROLLCARD_TYPE -> {
+            STR_HORIZONTAL_SCROLL_CARD_TYPE -> {
                 when (item.data.dataType) {
                     /*ItemCollection*/
                     STR_ITEM_COLLECTION_DATA_TYPE -> HORIZONTAL_SCROLLCARD_ITEM_COLLECTION_TYPE
                     /*HorizontalScrollCard*/
-                    STR_HORIZONTAL_SCROLLCARD_DATA_TYPE -> HORIZONTAL_SCROLLCARD_TYPE
+                    STR_HORIZONTAL_SCROLL_CARD_DATA_TYPE -> HORIZONTAL_SCROLLCARD_TYPE
                     else -> Const.ItemViewType.UNKNOWN
                 }
             }
@@ -65,11 +65,11 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         HORIZONTAL_SCROLLCARD_ITEM_COLLECTION_TYPE -> {
             /**主题创作广场+话题讨论大厅……*/
-            HorizontalScrollcardItemCollectionViewHolder(R.layout.item_community_horizontal_scrollcard_item_collection_type.inflate(parent))
+            HorizontalScrollCardItemCollectionViewHolder(R.layout.item_community_horizontal_scrollcard_item_collection_type.inflate(parent))
         }
         HORIZONTAL_SCROLLCARD_TYPE -> {
             /**轮播图*/
-            HorizontalScrollcardViewHolder(R.layout.item_community_horizontal_scrollcard_type.inflate(parent))
+            HorizontalScrollCardViewHolder(R.layout.item_community_horizontal_scrollcard_type.inflate(parent))
         }
         FOLLOW_CARD_TYPE -> {
             /**卡片视图*/
@@ -86,7 +86,7 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = getItem(position)!!
         when (holder) {
-            is HorizontalScrollcardItemCollectionViewHolder -> {
+            is HorizontalScrollCardItemCollectionViewHolder -> {
                 (holder.itemView.layoutParams as StaggeredGridLayoutManager.LayoutParams).isFullSpan = true
                 holder.recyclerView.layoutManager = LinearLayoutManager(fragment.activity).apply { orientation = LinearLayoutManager.HORIZONTAL }
                 if (holder.recyclerView.itemDecorationCount == 0) {
@@ -94,7 +94,7 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
                 }
                 holder.recyclerView.adapter = SquareCardOfCommunityContentAdapter(fragment, item.data.itemList)
             }
-            is HorizontalScrollcardViewHolder -> {
+            is HorizontalScrollCardViewHolder -> {
                 (holder.itemView.layoutParams as StaggeredGridLayoutManager.LayoutParams).isFullSpan = true
                 holder.bannerViewPager.run {
                     setCanLoop(false)
@@ -182,7 +182,7 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
     /**
      * 主题创作广场+话题讨论大厅……
      */
-    class HorizontalScrollcardItemCollectionViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class HorizontalScrollCardItemCollectionViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
     }
 
@@ -198,11 +198,11 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
 
         override fun getItemCount() = dataList.size
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SquareCardOfCommunityContentAdapter.ViewHolder {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_community_horizontal_scroll_card_itemcollection_item_type, parent, false))
         }
 
-        override fun onBindViewHolder(holder: SquareCardOfCommunityContentAdapter.ViewHolder, position: Int) {
+        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val item = dataList[position]
             holder.ivBgPicture.layoutParams.width = fragment.maxImageWidth
             holder.ivBgPicture.load(item.data.bgPicture)
@@ -235,8 +235,8 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
         }
     }
 
-    class HorizontalScrollcardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val bannerViewPager = view.findViewById<BannerViewPager<CommunityRecommend.ItemX, BannerAdapter.ViewHolder>>(R.id.bannerViewPager)
+    class HorizontalScrollCardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val bannerViewPager: BannerViewPager<CommunityRecommend.ItemX, BannerAdapter.ViewHolder> = view.findViewById(R.id.bannerViewPager)
     }
 
     class BannerAdapter : BaseBannerAdapter<CommunityRecommend.ItemX, BannerAdapter.ViewHolder>() {
@@ -304,10 +304,10 @@ class CommendAdapter(val fragment: CommendFragment) : PagingDataAdapter<Communit
 
         const val TAG = "CommendAdapter"
 
-        const val STR_HORIZONTAL_SCROLLCARD_TYPE = "horizontalScrollCard"
+        const val STR_HORIZONTAL_SCROLL_CARD_TYPE = "horizontalScrollCard"
         const val STR_COMMUNITY_COLUMNS_CARD = "communityColumnsCard"
 
-        const val STR_HORIZONTAL_SCROLLCARD_DATA_TYPE = "HorizontalScrollCard"
+        const val STR_HORIZONTAL_SCROLL_CARD_DATA_TYPE = "HorizontalScrollCard"
         const val STR_ITEM_COLLECTION_DATA_TYPE = "ItemCollection"
         const val STR_FOLLOW_CARD_DATA_TYPE = "FollowCard"
 

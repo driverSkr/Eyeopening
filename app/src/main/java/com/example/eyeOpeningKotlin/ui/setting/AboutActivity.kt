@@ -1,5 +1,6 @@
 package com.example.eyeOpeningKotlin.ui.setting
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Build
@@ -39,6 +40,7 @@ class AboutActivity: BaseActivity() {
         _binding = null
     }
 
+    @SuppressLint("ObsoleteSdkInt")
     override fun setupViews() {
         super.setupViews()
         binding.titleBar.tvTitle.text = GlobalUtil.getString(R.string.about)

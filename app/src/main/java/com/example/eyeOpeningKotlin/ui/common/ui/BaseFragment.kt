@@ -205,7 +205,7 @@ open class BaseFragment: Fragment(), RequestLifecycle {
     /**
      * 将load error view进行隐藏。
      */
-    protected fun hideLoadErrorView(){
+    private fun hideLoadErrorView(){
         loadErrorView?.visibility = View.GONE
     }
 
@@ -213,7 +213,7 @@ open class BaseFragment: Fragment(), RequestLifecycle {
      * 调用系统原生分享
      *
      * @param shareContent 分享内容
-     * @param shareType SHARE_MORE=0，SHARE_QQ=1，SHARE_WECHAT=2，SHARE_WEIBO=3，SHARE_QQZONE=4
+     * @param shareType SHARE_MORE=0，SHARE_QQ=1，SHARE_WECHAT=2，SHARE_WEIBO=3，SHARE_QQ_ZONE=4
      */
     protected fun share(shareContent: String, shareType: Int) {
         ShareUtil.share(this.activity, shareContent, shareType)

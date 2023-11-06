@@ -12,7 +12,7 @@ class FollowPagingSource(private val mainPageService: MainPageService) : PagingS
     override suspend fun load(params: LoadParams<String>): LoadResult<String, Follow.Item> {
         return try {
             val page = params.key ?: MainPageService.FOLLOW_URL
-            val repoResponse = mainPageService.gethFollow(page)
+            val repoResponse = mainPageService.getFollow(page)
             val repoItems = repoResponse.itemList
             val prevKey = null
             val nextKey = if (repoItems.isNotEmpty() && !repoResponse.nextPageUrl.isNullOrEmpty()) repoResponse.nextPageUrl else null

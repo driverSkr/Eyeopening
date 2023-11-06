@@ -18,14 +18,14 @@ class GridListItemDecoration(private val spanCount: Int = 2, private val space: 
         val position = parent.getChildAdapterPosition(view) // item position
         val count = parent.adapter?.itemCount //item count
         val spanIndex = (view.layoutParams as GridLayoutManager.LayoutParams).spanIndex
-        val lastRowFirstItemPostion = count?.minus(spanCount)   //最后一行,第一个item索引
+        val lastRowFirstItemPosition = count?.minus(spanCount)   //最后一行,第一个item索引
         val space = dp2px(space)
 
         when {
             position < spanCount -> {
                 outRect.bottom = space
             }
-            position < lastRowFirstItemPostion!! -> {
+            position < lastRowFirstItemPosition!! -> {
                 outRect.top = space
                 outRect.bottom = space
             }

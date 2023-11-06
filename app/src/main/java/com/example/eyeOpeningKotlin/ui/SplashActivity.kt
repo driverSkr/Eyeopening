@@ -10,7 +10,6 @@ import androidx.lifecycle.lifecycleScope
 import com.example.eyeOpeningKotlin.R
 import com.example.eyeOpeningKotlin.databinding.ActivitySplashBinding
 import com.example.eyeOpeningKotlin.ui.common.ui.BaseActivity
-import com.example.eyeOpeningKotlin.ui.common.ui.WebViewActivity
 import com.example.eyeOpeningKotlin.util.DataStoreUtils
 import com.example.eyeOpeningKotlin.util.GlobalUtil
 import com.permissionx.guolindev.PermissionX

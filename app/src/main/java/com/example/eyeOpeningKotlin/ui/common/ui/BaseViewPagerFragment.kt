@@ -24,21 +24,21 @@ import com.flyco.tablayout.listener.OnTabSelectListener
 abstract class BaseViewPagerFragment: BaseFragment() {
 
     /**日历图标*/
-    protected var ivCalendar: ImageView? = null
+    private var ivCalendar: ImageView? = null
     /**搜索图标*/
-    protected var ivSearch: ImageView? = null
+    private var ivSearch: ImageView? = null
     /**用于显示可滑动的内容页面*/
     protected var viewPager: ViewPager2? = null
     /**用于显示标签页以允许用户切换不同的内容*/
-    protected var tabLayout: CommonTabLayout? = null
+    private var tabLayout: CommonTabLayout? = null
     /**页面切换回调，更新标签*/
-    protected var pageChangeCallback: PageChangeCallback? = null
+    private var pageChangeCallback: PageChangeCallback? = null
     /**懒加载属性，用于初始化一个 VpAdapter 对象,用于为 ViewPager2 提供内容适配器,
     确保适配器对象在需要时被创建，以减少不必要的内存消耗*/
     protected val adapter: VpAdapter by lazy { VpAdapter(requireActivity()).apply { addFragments(createFragments) } }
     /**定义了在当前页面之外要保留多少个页面，以便在切换页面时不会被销毁
     默认值是 1，表示保留当前页面以及相邻的一个页面*/
-    protected var offscreenPageLimit = 1
+    private var offscreenPageLimit = 1
 
     /**
      * 子类需要提供标签标题和要显示的 Fragment 列表
@@ -79,7 +79,7 @@ abstract class BaseViewPagerFragment: BaseFragment() {
     /**
      * 初始化 ViewPager2 和 TabLayout。它设置了 ViewPager2 的适配器、TabLayout 的标签数据和标签选中监听器
      */
-    protected fun initViewPager(){
+    private fun initViewPager(){
         //查找布局中的 ViewPager2 和 TabLayout 控件
         viewPager = rootView?.findViewById(R.id.viewPager)
         tabLayout = rootView?.findViewById(R.id.tabLayout)

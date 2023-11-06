@@ -16,6 +16,7 @@ interface MainPageService {
     /**
      * 首页-发现列表
      */
+    /**@GET注解的路径是通过传递的url参数动态指定的**/
     @GET
     suspend fun getDiscovery(@Url url: String): Discovery
 
@@ -41,7 +42,7 @@ interface MainPageService {
      * 社区-关注列表
      */
     @GET
-    suspend fun gethFollow(@Url url: String): Follow
+    suspend fun getFollow(@Url url: String): Follow
 
     /**
      * 通知-推送列表
@@ -52,6 +53,7 @@ interface MainPageService {
     /**
      * 搜索-热搜关键词
      */
+    /**使用硬编码路径,而不是动态路径**/
     @GET("api/v3/queries/hot")
     suspend fun getHotSearch(): List<String>
 
@@ -85,6 +87,6 @@ interface MainPageService {
         /**
          * 通知-推送列表
          */
-        const val PUSHMESSAGE_URL = "${ServiceCreator.BASE_URL}api/v3/messages"
+        const val PUSH_MESSAGE_URL = "${ServiceCreator.BASE_URL}api/v3/messages"
     }
 }

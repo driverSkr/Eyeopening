@@ -32,7 +32,7 @@ class TypefaceTextView: AppCompatTextView {
         /**
          * 根据字体类型，获取自定义字体。
          */
-        fun getTypeface(typefaceType: Int?) = when(typefaceType){
+        fun getTypeface(typefaceType: Int?): Typeface = when(typefaceType){
             TypeFaceUtil.FZLL_TYPEFACE -> TypeFaceUtil.fzlLTypeface
             TypeFaceUtil.FZDB1_TYPEFACE -> TypeFaceUtil.fzdb1Typeface
             TypeFaceUtil.FUTURA_TYPEFACE -> TypeFaceUtil.futuraTypeface

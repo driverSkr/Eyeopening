@@ -1,5 +1,6 @@
 package com.example.eyeOpeningKotlin.ui.common.ui.vassonic
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build
 import android.os.Environment
@@ -47,6 +48,7 @@ class SonicRuntimeImpl(context: Context?): SonicRuntime(context) {
         }
     }
 
+    @SuppressLint("ObsoleteSdkInt")
     override fun createWebResourceResponse(mimeType: String, encoding: String, data: InputStream, headers: Map<String, String>): Any {
         val resourceResponse = WebResourceResponse(mimeType, encoding, data)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -64,7 +66,7 @@ class SonicRuntimeImpl(context: Context?): SonicRuntime(context) {
     }
 
     override fun setCookie(url: String?, cookies: List<String>?): Boolean {
-        if (!TextUtils.isEmpty(url) && cookies != null && cookies.size > 0) {
+        if (!TextUtils.isEmpty(url) && cookies != null && cookies.isNotEmpty()) {
             val cookieManager = CookieManager.getInstance()
             for (cookie in cookies) {
                 cookieManager.setCookie(url, cookie)

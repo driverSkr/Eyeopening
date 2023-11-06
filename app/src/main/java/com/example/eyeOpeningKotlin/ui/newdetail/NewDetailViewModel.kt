@@ -5,7 +5,6 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.example.eyeOpeningKotlin.logic.VideoRepository
-import com.example.eyeOpeningKotlin.logic.model.VideoDetail
 import com.example.eyeOpeningKotlin.logic.model.VideoRelated
 import com.example.eyeOpeningKotlin.logic.model.VideoReplies
 import com.example.eyeOpeningKotlin.logic.network.api.VideoService
@@ -26,58 +25,58 @@ class NewDetailViewModel(repository: VideoRepository) : ViewModel() {
 
     var videoId: Long = 0L
 
-    private var repliesLiveData_ = MutableLiveData<String>()
-    private var videoDetailLiveData_ = MutableLiveData<RequestParam>()
-    private var repliesAndRepliesLiveData_ = MutableLiveData<RequestParam>()
+    private var _repliesLiveData = MutableLiveData<String>()
+    private var _videoDetailLiveData = MutableLiveData<RequestParam>()
+    private var _repliesAndRepliesLiveData = MutableLiveData<RequestParam>()
 
     var nextPageUrl: String? = null
 
-    val videoDetailLiveData = Transformations.switchMap(videoDetailLiveData_) {
+    val videoDetailLiveData = Transformations.switchMap(_videoDetailLiveData) {
         liveData {
-            val resutlt = try {
+            val result = try {
                 val videoDetail = repository.refreshVideoDetail(it.videoId, it.repliesUrl)   //视频信息+相关推荐+评论
                 Result.success(videoDetail)
             } catch (e: Exception) {
-                Result.failure<VideoDetail>(e)
+                Result.failure(e)
             }
-            emit(resutlt)
+            emit(result)
         }
     }
 
-    val repliesAndRepliesLiveData = Transformations.switchMap(repliesAndRepliesLiveData_) {
+    val repliesAndRepliesLiveData = Transformations.switchMap(_repliesAndRepliesLiveData) {
         liveData {
-            val resutlt = try {
+            val result = try {
                 val videoDetail = repository.refreshVideoRelatedAndVideoReplies(it.videoId, it.repliesUrl)   //相关推荐+评论
                 Result.success(videoDetail)
             } catch (e: Exception) {
-                Result.failure<VideoDetail>(e)
+                Result.failure(e)
             }
-            emit(resutlt)
+            emit(result)
         }
     }
 
-    val repliesLiveData = Transformations.switchMap(repliesLiveData_) {
+    val repliesLiveData = Transformations.switchMap(_repliesLiveData) {
         liveData {
-            val resutlt = try {
+            val result = try {
                 val videoDetail = repository.refreshVideoReplies(it)   //评论
                 Result.success(videoDetail)
             } catch (e: Exception) {
-                Result.failure<VideoReplies>(e)
+                Result.failure(e)
             }
-            emit(resutlt)
+            emit(result)
         }
     }
 
     fun onRefresh() {
         if (videoInfoData == null) {
-            videoDetailLiveData_.value = RequestParam(videoId, "${VideoService.VIDEO_REPLIES_URL}$videoId")
+            _videoDetailLiveData.value = RequestParam(videoId, "${VideoService.VIDEO_REPLIES_URL}$videoId")
         } else {
-            repliesAndRepliesLiveData_.value = RequestParam(videoInfoData?.videoId ?: 0L, "${VideoService.VIDEO_REPLIES_URL}${videoInfoData?.videoId ?: 0L}")
+            _repliesAndRepliesLiveData.value = RequestParam(videoInfoData?.videoId ?: 0L, "${VideoService.VIDEO_REPLIES_URL}${videoInfoData?.videoId ?: 0L}")
         }
     }
 
     fun onLoadMore() {
-        repliesLiveData_.value = nextPageUrl ?: ""
+        _repliesLiveData.value = nextPageUrl ?: ""
     }
 
     inner class RequestParam(val videoId: Long, val repliesUrl: String)

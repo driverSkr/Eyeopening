@@ -45,42 +45,42 @@ class EmptyViewHolder(view: View): RecyclerView.ViewHolder(view)
 
 //相关推荐
 class TextCardViewHeader4ViewHolder(view: View): RecyclerView.ViewHolder(view){
-    val tvTitle4 = view.findViewById<TextView>(R.id.tvTitle4)
-    val ivInto4 = view.findViewById<ImageView>(R.id.ivInto4)
+    val tvTitle4: TextView = view.findViewById(R.id.tvTitle4)
+    val ivInto4: ImageView = view.findViewById(R.id.ivInto4)
 }
 
 //五分钟新知
 class TextCardViewHeader5ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val tvTitle5 = view.findViewById<TextView>(R.id.tvTitle5)
-    val tvFollow = view.findViewById<TextView>(R.id.tvFollow)
-    val ivInto5 = view.findViewById<ImageView>(R.id.ivInto5)
+    val tvTitle5: TextView = view.findViewById(R.id.tvTitle5)
+    val tvFollow: TextView = view.findViewById(R.id.tvFollow)
+    val ivInto5: ImageView = view.findViewById(R.id.ivInto5)
 }
 
 //开眼专栏
 class TextCardViewHeader7ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val tvTitle7 = view.findViewById<TextView>(R.id.tvTitle7)
-    val tvRightText7 = view.findViewById<TextView>(R.id.tvRightText7)
-    val ivInto7 = view.findViewById<ImageView>(R.id.ivInto7)
+    val tvTitle7: TextView = view.findViewById(R.id.tvTitle7)
+    val tvRightText7: TextView = view.findViewById(R.id.tvRightText7)
+    val ivInto7: ImageView = view.findViewById(R.id.ivInto7)
 }
 
 //本周榜单
 class TextCardViewHeader8ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val tvTitle8 = view.findViewById<TextView>(R.id.tvTitle8)
-    val tvRightText8 = view.findViewById<TextView>(R.id.tvRightText8)
-    val ivInto8 = view.findViewById<ImageView>(R.id.ivInto8)
+    val tvTitle8: TextView = view.findViewById(R.id.tvTitle8)
+    val tvRightText8: TextView = view.findViewById(R.id.tvRightText8)
+    val ivInto8: ImageView = view.findViewById(R.id.ivInto8)
 }
 
 //
 class TextCardViewFooter2ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val tvFooterRightText2 = view.findViewById<TextView>(R.id.tvFooterRightText2)
-    val ivTooterInto2 = view.findViewById<ImageView>(R.id.ivTooterInto2)
+    val tvFooterRightText2: TextView = view.findViewById(R.id.tvFooterRightText2)
+    val ivTooterInto2: ImageView = view.findViewById(R.id.ivTooterInto2)
 }
 
 //刷新推荐
 class TextCardViewFooter3ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val tvRefresh = view.findViewById<TextView>(R.id.tvRefresh)
-    val tvFooterRightText3 = view.findViewById<TextView>(R.id.tvFooterRightText3)
-    val ivTooterInto3 = view.findViewById<ImageView>(R.id.ivTooterInto3)
+    val tvRefresh: TextView = view.findViewById(R.id.tvRefresh)
+    val tvFooterRightText3: TextView = view.findViewById(R.id.tvFooterRightText3)
+    val ivTooterInto3: ImageView = view.findViewById(R.id.ivTooterInto3)
 }
 
 class HorizontalScrollCardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -88,91 +88,91 @@ class HorizontalScrollCardViewHolder(view: View) : RecyclerView.ViewHolder(view)
 }
 
 class SpecialSquareCardCollectionViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
-    val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
-    val tvRightText = view.findViewById<TextView>(R.id.tvRightText)
-    val ivInto = view.findViewById<ImageView>(R.id.ivInto)
+    val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
+    val tvTitle: TextView = view.findViewById(R.id.tvTitle)
+    val tvRightText: TextView = view.findViewById(R.id.tvRightText)
+    val ivInto: ImageView = view.findViewById(R.id.ivInto)
 }
 
 class ColumnCardListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
-    val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
-    val tvRightText = view.findViewById<TextView>(R.id.tvRightText)
-    val ivInto = view.findViewById<ImageView>(R.id.ivInto)
+    val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
+    val tvTitle: TextView = view.findViewById(R.id.tvTitle)
+    val tvRightText: TextView = view.findViewById(R.id.tvRightText)
+    val ivInto: ImageView = view.findViewById(R.id.ivInto)
 }
 
 class FollowCardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val ivVideo = view.findViewById<ImageView>(R.id.ivVideo)
-    val ivAvatar = view.findViewById<ImageView>(R.id.ivAvatar)
-    val tvVideoDuration = view.findViewById<TextView>(R.id.tvVideoDuration)
-    val tvDescription = view.findViewById<TextView>(R.id.tvDescription)
-    val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
-    val ivShare = view.findViewById<ImageView>(R.id.ivShare)
-    val tvLabel = view.findViewById<TextView>(R.id.tvLabel)
-    val ivChoiceness = view.findViewById<ImageView>(R.id.ivChoiceness)
+    val ivVideo: ImageView = view.findViewById(R.id.ivVideo)
+    val ivAvatar: ImageView = view.findViewById(R.id.ivAvatar)
+    val tvVideoDuration: TextView = view.findViewById(R.id.tvVideoDuration)
+    val tvDescription: TextView = view.findViewById(R.id.tvDescription)
+    val tvTitle: TextView = view.findViewById(R.id.tvTitle)
+    val ivShare: ImageView = view.findViewById(R.id.ivShare)
+    val tvLabel: TextView = view.findViewById(R.id.tvLabel)
+    val ivChoiceness: ImageView = view.findViewById(R.id.ivChoiceness)
 }
 
 class Banner3ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val ivPicture = view.findViewById<ImageView>(R.id.ivPicture)
-    val tvLabel = view.findViewById<TextView>(R.id.tvLabel)
-    val ivAvatar = view.findViewById<ImageView>(R.id.ivAvatar)
-    val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
-    val tvDescription = view.findViewById<TextView>(R.id.tvDescription)
+    val ivPicture: ImageView = view.findViewById(R.id.ivPicture)
+    val tvLabel: TextView = view.findViewById(R.id.tvLabel)
+    val ivAvatar: ImageView = view.findViewById(R.id.ivAvatar)
+    val tvTitle: TextView = view.findViewById(R.id.tvTitle)
+    val tvDescription: TextView = view.findViewById(R.id.tvDescription)
 }
 
 class VideoSmallCardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val ivPicture = view.findViewById<ImageView>(R.id.ivPicture)
-    val tvVideoDuration = view.findViewById<TextView>(R.id.tvVideoDuration)
-    val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
-    val tvDescription = view.findViewById<TextView>(R.id.tvDescription)
-    val ivShare = view.findViewById<ImageView>(R.id.ivShare)
+    val ivPicture: ImageView = view.findViewById(R.id.ivPicture)
+    val tvVideoDuration: TextView = view.findViewById(R.id.tvVideoDuration)
+    val tvTitle: TextView = view.findViewById(R.id.tvTitle)
+    val tvDescription: TextView = view.findViewById(R.id.tvDescription)
+    val ivShare: ImageView = view.findViewById(R.id.ivShare)
 }
 
 class TagBriefCardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val ivPicture = view.findViewById<ImageView>(R.id.ivPicture)
-    val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
-    val tvDescription = view.findViewById<TextView>(R.id.tvDescription)
-    val tvFollow = view.findViewById<TextView>(R.id.tvFollow)
+    val ivPicture: ImageView = view.findViewById(R.id.ivPicture)
+    val tvTitle: TextView = view.findViewById(R.id.tvTitle)
+    val tvDescription: TextView = view.findViewById(R.id.tvDescription)
+    val tvFollow: TextView = view.findViewById(R.id.tvFollow)
 }
 
 class TopicBriefCardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val ivPicture = view.findViewById<ImageView>(R.id.ivPicture)
-    val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
-    val tvDescription = view.findViewById<TextView>(R.id.tvDescription)
+    val ivPicture: ImageView = view.findViewById(R.id.ivPicture)
+    val tvTitle: TextView = view.findViewById(R.id.tvTitle)
+    val tvDescription: TextView = view.findViewById(R.id.tvDescription)
 }
 
 class InformationCardFollowCardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val ivCover = view.findViewById<ImageView>(R.id.ivCover)
-    val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+    val ivCover: ImageView = view.findViewById(R.id.ivCover)
+    val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
 }
 
 class AutoPlayVideoAdViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val tvLabel = view.findViewById<TextView>(R.id.tvLabel)
-    val ivAvatar = view.findViewById<ImageView>(R.id.ivAvatar)
-    val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
-    val tvDescription = view.findViewById<TextView>(R.id.tvDescription)
+    val tvLabel: TextView = view.findViewById(R.id.tvLabel)
+    val ivAvatar: ImageView = view.findViewById(R.id.ivAvatar)
+    val tvTitle: TextView = view.findViewById(R.id.tvTitle)
+    val tvDescription: TextView = view.findViewById(R.id.tvDescription)
     val videoPlayer: GSYVideoPlayer = view.findViewById(R.id.videoPlayer)
 }
 
 class BannerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val ivPicture = view.findViewById<ImageView>(R.id.ivPicture)
+    val ivPicture: ImageView = view.findViewById(R.id.ivPicture)
 }
 
 class UgcSelectedCardCollectionViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
-    val tvRightText = view.findViewById<TextView>(R.id.tvRightText)
-    val ivCoverLeft = view.findViewById<ImageView>(R.id.ivCoverLeft)
-    val ivLayersLeft = view.findViewById<ImageView>(R.id.ivLayersLeft)
-    val ivAvatarLeft = view.findViewById<ImageView>(R.id.ivAvatarLeft)
-    val tvNicknameLeft = view.findViewById<TextView>(R.id.tvNicknameLeft)
-    val ivCoverRightTop = view.findViewById<ImageView>(R.id.ivCoverRightTop)
-    val ivLayersRightTop = view.findViewById<ImageView>(R.id.ivLayersRightTop)
-    val ivAvatarRightTop = view.findViewById<ImageView>(R.id.ivAvatarRightTop)
-    val tvNicknameRightTop = view.findViewById<TextView>(R.id.tvNicknameRightTop)
-    val ivCoverRightBottom = view.findViewById<ImageView>(R.id.ivCoverRightBottom)
-    val ivLayersRightBottom = view.findViewById<ImageView>(R.id.ivLayersRightBottom)
-    val ivAvatarRightBottom = view.findViewById<ImageView>(R.id.ivAvatarRightBottom)
-    val tvNicknameRightBottom = view.findViewById<TextView>(R.id.tvNicknameRightBottom)
+    val tvTitle: TextView = view.findViewById(R.id.tvTitle)
+    val tvRightText: TextView = view.findViewById(R.id.tvRightText)
+    val ivCoverLeft: ImageView = view.findViewById(R.id.ivCoverLeft)
+    val ivLayersLeft: ImageView = view.findViewById(R.id.ivLayersLeft)
+    val ivAvatarLeft: ImageView = view.findViewById(R.id.ivAvatarLeft)
+    val tvNicknameLeft: TextView = view.findViewById(R.id.tvNicknameLeft)
+    val ivCoverRightTop: ImageView = view.findViewById(R.id.ivCoverRightTop)
+    val ivLayersRightTop: ImageView = view.findViewById(R.id.ivLayersRightTop)
+    val ivAvatarRightTop: ImageView = view.findViewById(R.id.ivAvatarRightTop)
+    val tvNicknameRightTop: TextView = view.findViewById(R.id.tvNicknameRightTop)
+    val ivCoverRightBottom: ImageView = view.findViewById(R.id.ivCoverRightBottom)
+    val ivLayersRightBottom: ImageView = view.findViewById(R.id.ivLayersRightBottom)
+    val ivAvatarRightBottom: ImageView = view.findViewById(R.id.ivAvatarRightBottom)
+    val tvNicknameRightBottom: TextView = view.findViewById(R.id.tvNicknameRightBottom)
 }
 
 /**

@@ -98,7 +98,7 @@ class DiscoveryAdapter(val fragment: DiscoveryFragment) : PagingDataAdapter<Disc
                     setRevealWidth(GlobalUtil.getDimension(R.dimen.listSpaceSize))
                     if (item.data.itemList.size == 1) setPageMargin(0) else setPageMargin(dp2px(4f))
                     setIndicatorVisibility(View.GONE)
-                    setAdapter(HorizontalScrollCardAdapter())
+                    adapter = HorizontalScrollCardAdapter()
                     removeDefaultPageTransformer()
                     setOnPageClickListener { position ->
                         ActionUrlUtil.process(fragment, item.data.itemList[position].data.actionUrl, item.data.itemList[position].data.title)
@@ -231,8 +231,8 @@ class DiscoveryAdapter(val fragment: DiscoveryFragment) : PagingDataAdapter<Disc
     class SpecialSquareCardCollectionAdapter(val dataList: List<Discovery.ItemX>) : RecyclerView.Adapter<SpecialSquareCardCollectionAdapter.ViewHolder>() {
 
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val ivPicture = view.findViewById<ImageView>(R.id.ivPicture)
-            val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
+            val ivPicture: ImageView = view.findViewById(R.id.ivPicture)
+            val tvTitle: TextView = view.findViewById(R.id.tvTitle)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -252,8 +252,8 @@ class DiscoveryAdapter(val fragment: DiscoveryFragment) : PagingDataAdapter<Disc
     class ColumnCardListAdapter(val dataList: List<Discovery.ItemX>) : RecyclerView.Adapter<ColumnCardListAdapter.ViewHolder>() {
 
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val ivPicture = view.findViewById<ImageView>(R.id.ivPicture)
-            val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
+            val ivPicture: ImageView = view.findViewById(R.id.ivPicture)
+            val tvTitle: TextView = view.findViewById(R.id.tvTitle)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -277,7 +277,7 @@ class DiscoveryAdapter(val fragment: DiscoveryFragment) : PagingDataAdapter<Disc
             val count = parent.adapter?.itemCount //item count
             val spanIndex = (view.layoutParams as GridLayoutManager.LayoutParams).spanIndex
             val spanCount = 2
-            val lastRowFirstItemPostion = count?.minus(spanCount)   //最后一行,第一个item索引
+            val lastRowFirstItemPosition = count?.minus(spanCount)   //最后一行,第一个item索引
             val space = dp2px(2f)
             val rightCountSpace = dp2px(14f)
 
@@ -297,7 +297,7 @@ class DiscoveryAdapter(val fragment: DiscoveryFragment) : PagingDataAdapter<Disc
                 position < spanCount -> {
                     outRect.right = space
                 }
-                position < lastRowFirstItemPostion!! -> {
+                position < lastRowFirstItemPosition!! -> {
                     outRect.left = space
                     outRect.right = space
                 }

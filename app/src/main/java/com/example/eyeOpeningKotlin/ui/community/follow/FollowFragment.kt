@@ -37,11 +37,11 @@ class FollowFragment: BaseFragment() {
 
     private val binding get() = _binding!!
 
-    private val viewModel by lazy { ViewModelProvider(this, InjectorUtil.getFollowViewModelFactory()).get(FollowViewModel::class.java) }
+    private val viewModel by lazy { ViewModelProvider(this, InjectorUtil.getFollowViewModelFactory())[FollowViewModel::class.java] }
 
     private lateinit var adapter: FollowAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentRefreshLayoutBinding.inflate(layoutInflater, container, false)
         return super.onCreateView(binding.root)
     }

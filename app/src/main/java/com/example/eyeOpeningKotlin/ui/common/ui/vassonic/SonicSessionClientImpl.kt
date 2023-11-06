@@ -6,7 +6,7 @@ import com.tencent.sonic.sdk.SonicSessionClient
 import java.util.*
 
 /**
- * a implement of SonicSessionClient which need to connect webview and content data.
+ * a implement of SonicSessionClient which need to connect webView and content data.
  */
 class SonicSessionClientImpl : SonicSessionClient() {
 

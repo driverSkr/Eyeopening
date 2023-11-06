@@ -79,7 +79,7 @@ object ServiceCreator {
             val originalRequest = chain.request()
             val originalHttpUrl = originalRequest.url()
             val url = originalHttpUrl.newBuilder().apply {
-                addQueryParameter("udid", GlobalUtil.getDeviceSerial())
+                addQueryParameter("uuid", GlobalUtil.getDeviceSerial())
                 //针对开眼官方【首页推荐 】api 变动， 需要单独做处理。原因：附加 vc、vn 这两个字段后，请求接口无响应。
                 if (!originalHttpUrl.toString().contains(MainPageService.HOMEPAGE_RECOMMEND_URL)) {
                     addQueryParameter("vc", GlobalUtil.eyeopeningVersionCode.toString())

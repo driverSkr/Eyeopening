@@ -32,7 +32,7 @@ class MineFragment: BaseFragment() {
     private val binding: FragmentMineBinding
         get() = _binding!!
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentMineBinding.inflate(inflater, container, false)
         return super.onCreateView(binding.root)
     }

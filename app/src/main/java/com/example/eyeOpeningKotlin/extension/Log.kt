@@ -6,7 +6,7 @@ import androidx.viewbinding.BuildConfig
 /**
  * 日志调试工具类。
  *
- * @author boge
+ * @author driverSkr
  * @since  2023/10/17
  */
 private const val VERBOSE = 1

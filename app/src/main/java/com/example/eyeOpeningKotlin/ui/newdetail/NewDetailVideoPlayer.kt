@@ -2,6 +2,7 @@ package com.example.eyeOpeningKotlin.ui.newdetail
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.ViewGroup
 import android.widget.ImageView
 import com.example.eyeOpeningKotlin.R
 import com.example.eyeOpeningKotlin.extension.gone
@@ -100,5 +101,5 @@ class NewDetailVideoPlayer: StandardGSYVideoPlayer {
         super.changeUiToError()
     }
 
-    fun getBottomContainer() = mBottomContainer
+    fun getBottomContainer(): ViewGroup = mBottomContainer
 }

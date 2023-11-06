@@ -52,11 +52,11 @@ class HotSearchAdapter(val fragment: SearchFragment,var dataList: List<String>):
     override fun getItemCount() = dataList.size + 1
 
     class HeaderViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
+        val tvTitle: TextView = view.findViewById(R.id.tvTitle)
     }
 
     class HotSearchViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvKeywords = view.findViewById<TextView>(R.id.tvKeywords)
+        val tvKeywords: TextView = view.findViewById(R.id.tvKeywords)
     }
 
     companion object {

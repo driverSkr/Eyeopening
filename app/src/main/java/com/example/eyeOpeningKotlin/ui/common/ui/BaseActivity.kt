@@ -1,6 +1,5 @@
 package com.example.eyeOpeningKotlin.ui.common.ui
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -158,7 +157,7 @@ open class BaseActivity: AppCompatActivity() {
      * 调用系统原生分享
      *
      * @param shareContent 分享内容
-     * @param shareType SHARE_MORE=0，SHARE_QQ=1，SHARE_WECHAT=2，SHARE_WEIBO=3，SHARE_QQZONE=4
+     * @param shareType SHARE_MORE=0，SHARE_QQ=1，SHARE_WECHAT=2，SHARE_WEIBO=3，SHARE_QQ_ZONE=4
      */
     protected fun share(shareContent: String,shareType: Int){
         ShareUtil.share(this,shareContent,shareType)

@@ -81,34 +81,34 @@ class NewDetailReplyAdapter(val activity: NewDetailActivity, val dataList: List<
     private fun getTimeReply(dateMillis: Long): String {
         val currentMillis = System.currentTimeMillis()
         val timePast = currentMillis - dateMillis
-        if (timePast > -DateUtil.MINUTE) {
+        return if (timePast > -DateUtil.MINUTE) {
             when {
                 timePast < DateUtil.DAY -> {
-                    return DateUtil.getDate(dateMillis, "HH:mm")
+                    DateUtil.getDate(dateMillis, "HH:mm")
                 }
                 else -> {
-                    return DateUtil.getDate(dateMillis, "yyyy/MM/dd")
+                    DateUtil.getDate(dateMillis, "yyyy/MM/dd")
                 }
             }
         } else {
-            return DateUtil.getDate(dateMillis, "yyyy/MM/dd HH:mm")
+            DateUtil.getDate(dateMillis, "yyyy/MM/dd HH:mm")
         }
     }
 
     class ReplyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val ivAvatar = view.findViewById<ImageView>(R.id.ivAvatar)
-        val tvNickName = view.findViewById<TextView>(R.id.tvNickName)
-        val ivLike = view.findViewById<ImageView>(R.id.ivLike)
-        val tvLikeCount = view.findViewById<TextView>(R.id.tvLikeCount)
-        val tvMessage = view.findViewById<TextView>(R.id.tvMessage)
-        val tvTime = view.findViewById<TextView>(R.id.tvTime)
+        val ivAvatar: ImageView = view.findViewById(R.id.ivAvatar)
+        val tvNickName: TextView = view.findViewById(R.id.tvNickName)
+        val ivLike: ImageView = view.findViewById(R.id.ivLike)
+        val tvLikeCount: TextView = view.findViewById(R.id.tvLikeCount)
+        val tvMessage: TextView = view.findViewById(R.id.tvMessage)
+        val tvTime: TextView = view.findViewById(R.id.tvTime)
 
-        val groupReply = view.findViewById<Group>(R.id.groupReply)
-        val tvReplyUser = view.findViewById<TextView>(R.id.tvReplyUser)
-        val ivReplyAvatar = view.findViewById<ImageView>(R.id.ivReplyAvatar)
-        val tvReplyNickName = view.findViewById<TextView>(R.id.tvReplyNickName)
-        val tvReplyMessage = view.findViewById<TextView>(R.id.tvReplyMessage)
-        val tvShowConversation = view.findViewById<TextView>(R.id.tvShowConversation)
+        val groupReply: Group = view.findViewById(R.id.groupReply)
+        val tvReplyUser: TextView = view.findViewById(R.id.tvReplyUser)
+        val ivReplyAvatar: ImageView = view.findViewById(R.id.ivReplyAvatar)
+        val tvReplyNickName: TextView = view.findViewById(R.id.tvReplyNickName)
+        val tvReplyMessage: TextView = view.findViewById(R.id.tvReplyMessage)
+        val tvShowConversation: TextView = view.findViewById(R.id.tvShowConversation)
 
     }
 

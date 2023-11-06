@@ -66,8 +66,7 @@ class SonicJavaScriptInterface(private val sessionClient: SonicSessionClientImpl
             var i = 0
             val length = value.length
             while (i < length) {
-                val c = value[i]
-                when (c) {
+                when (val c = value[i]) {
                     '"', '\\', '/' -> out.append('\\').append(c)
                     '\t' -> out.append("\\t")
                     '\b' -> out.append("\\b")

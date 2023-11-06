@@ -6,7 +6,6 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
 import android.view.WindowManager
 import android.webkit.*
@@ -259,7 +258,7 @@ class WebViewActivity: BaseActivity() {
         //加载模式的键
         const val MODE_DEFAULT = 0  //默认模式
 
-        const val MODE_SONIC = 1    //Sonic 模式
+        private const val MODE_SONIC = 1    //Sonic 模式
 
         const val MODE_SONIC_WITH_OFFLINE_CACHE = 2 //Sonic 带离线缓存模式
 

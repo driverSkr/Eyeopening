@@ -145,12 +145,12 @@ class NoStatusFooter: SimpleComponent,RefreshFooter {
         mRefreshKernel?.requestRemeasureHeightFor(this)
     }
 
-    fun setPrimaryColor(@ColorInt primaryColor: Int) = apply {
+    private fun setPrimaryColor(@ColorInt primaryColor: Int) = apply {
         mBackgroundColor = primaryColor
         mRefreshKernel?.requestDrawBackgroundFor(this, primaryColor)
     }
 
-    fun setAccentColor(@ColorInt accentColor: Int) = apply {
+    private fun setAccentColor(@ColorInt accentColor: Int) = apply {
         mTitleText.setTextColor(accentColor)
     }
 

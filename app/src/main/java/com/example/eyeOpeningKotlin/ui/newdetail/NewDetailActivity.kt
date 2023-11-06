@@ -158,7 +158,7 @@ class NewDetailActivity : BaseActivity() {
         viewModel.onRefresh()
     }
 
-    private fun checkArguments() = if (intent.getParcelableExtra<VideoInfo>(EXTRA_VIDEOINFO) == null && intent.getLongExtra(EXTRA_VIDEO_ID, 0L) == 0L) {
+    private fun checkArguments() = if (intent.getParcelableExtra<VideoInfo>(EXTRA_VIDEO_INFO) == null && intent.getLongExtra(EXTRA_VIDEO_ID, 0L) == 0L) {
         GlobalUtil.getString(R.string.jump_page_unknown_error).showToast()
         finish()
         false
@@ -167,7 +167,7 @@ class NewDetailActivity : BaseActivity() {
     }
 
     private fun initParams() {
-        if (intent.getParcelableExtra<VideoInfo>(EXTRA_VIDEOINFO) != null) viewModel.videoInfoData = intent.getParcelableExtra(EXTRA_VIDEOINFO)
+        if (intent.getParcelableExtra<VideoInfo>(EXTRA_VIDEO_INFO) != null) viewModel.videoInfoData = intent.getParcelableExtra(EXTRA_VIDEO_INFO)
         if (intent.getLongExtra(EXTRA_VIDEO_ID, 0L) != 0L) viewModel.videoId = intent.getLongExtra(EXTRA_VIDEO_ID, 0L)
     }
 
@@ -409,12 +409,12 @@ class NewDetailActivity : BaseActivity() {
     companion object {
 
         const val TAG = "NewDetailActivity"
-        const val EXTRA_VIDEOINFO = "videoInfo"
+        const val EXTRA_VIDEO_INFO = "videoInfo"
         const val EXTRA_VIDEO_ID = "videoId"
 
         fun start(context: Activity, videoInfo: VideoInfo) {
             val starter = Intent(context, NewDetailActivity::class.java)
-            starter.putExtra(EXTRA_VIDEOINFO, videoInfo)
+            starter.putExtra(EXTRA_VIDEO_INFO, videoInfo)
             context.startActivity(starter)
             context.overridePendingTransition(R.anim.anl_push_bottom_in, R.anim.anl_push_up_out)
         }

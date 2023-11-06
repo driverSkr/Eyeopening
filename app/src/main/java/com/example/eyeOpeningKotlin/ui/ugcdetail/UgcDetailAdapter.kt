@@ -82,12 +82,12 @@ class UgcDetailAdapter(val activity: UgcDetailActivity, var dataList: List<Commu
                             cover.scaleType = ImageView.ScaleType.CENTER_CROP
                             cover.load(data.cover.detail)
                             cover.parent?.run { removeView(cover) }
-                            setThumbImageView(cover)
+                            thumbImageView = cover
                             setThumbPlay(true)
                             setIsTouchWiget(false)
-                            setLooping(true)
-                            setPlayTag(TAG)
-                            setPlayPosition(position)
+                            isLooping = true
+                            playTag = TAG
+                            playPosition = position
                             setVideoAllCallBack(object : GSYSampleCallBack() {
                                 override fun onClickBlank(url: String?, vararg objects: Any?) {
                                     super.onClickBlank(url, *objects)
@@ -130,26 +130,26 @@ class UgcDetailAdapter(val activity: UgcDetailActivity, var dataList: List<Commu
     }
 
     class FollowCardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val videoPlayer = view.findViewById<GSYVideoPlayer>(R.id.videoPlayer)
-        val viewPagerPhotos = view.findViewById<ViewPager2>(R.id.viewPagerPhotos)
-        val ivPullDown = view.findViewById<ImageView>(R.id.ivPullDown)
-        val tvPhotoCount = view.findViewById<TextView>(R.id.tvPhotoCount)
-        val ivAvatar = view.findViewById<ImageView>(R.id.ivAvatar)
-        val ivAvatarStar = view.findViewById<CircleImageView>(R.id.ivAvatarStar)
-        val tvNickName = view.findViewById<TextView>(R.id.tvNickName)
-        val tvPrivateLetter = view.findViewById<TextView>(R.id.tvPrivateLetter)
-        val tvFollow = view.findViewById<TextView>(R.id.tvFollow)
-        val tvDescription = view.findViewById<TextView>(R.id.tvDescription)
-        val tvTagName = view.findViewById<TextView>(R.id.tvTagName)
-        val ivCollectionCount = view.findViewById<ImageView>(R.id.ivCollectionCount)
-        val tvCollectionCount = view.findViewById<TextView>(R.id.tvCollectionCount)
-        val ivReply = view.findViewById<ImageView>(R.id.ivReply)
-        val tvReplyCount = view.findViewById<TextView>(R.id.tvReplyCount)
-        val ivFavorites = view.findViewById<ImageView>(R.id.ivFavorites)
-        val tvFavorites = view.findViewById<TextView>(R.id.tvFavorites)
-        val ivShare = view.findViewById<ImageView>(R.id.ivShare)
-        val flHeader = view.findViewById<FrameLayout>(R.id.flHeader)
-        val llUgcInfo = view.findViewById<LinearLayout>(R.id.llUgcInfo)
+        val videoPlayer: GSYVideoPlayer = view.findViewById(R.id.videoPlayer)
+        val viewPagerPhotos: ViewPager2 = view.findViewById(R.id.viewPagerPhotos)
+        val ivPullDown: ImageView = view.findViewById(R.id.ivPullDown)
+        val tvPhotoCount: TextView = view.findViewById(R.id.tvPhotoCount)
+        val ivAvatar: ImageView = view.findViewById(R.id.ivAvatar)
+        val ivAvatarStar: CircleImageView = view.findViewById(R.id.ivAvatarStar)
+        val tvNickName: TextView = view.findViewById(R.id.tvNickName)
+        val tvPrivateLetter: TextView = view.findViewById(R.id.tvPrivateLetter)
+        val tvFollow: TextView = view.findViewById(R.id.tvFollow)
+        val tvDescription: TextView = view.findViewById(R.id.tvDescription)
+        val tvTagName: TextView = view.findViewById(R.id.tvTagName)
+        val ivCollectionCount: ImageView = view.findViewById(R.id.ivCollectionCount)
+        val tvCollectionCount: TextView = view.findViewById(R.id.tvCollectionCount)
+        val ivReply: ImageView = view.findViewById(R.id.ivReply)
+        val tvReplyCount: TextView = view.findViewById(R.id.tvReplyCount)
+        val ivFavorites: ImageView = view.findViewById(R.id.ivFavorites)
+        val tvFavorites: TextView = view.findViewById(R.id.tvFavorites)
+        val ivShare: ImageView = view.findViewById(R.id.ivShare)
+        val flHeader: FrameLayout = view.findViewById(R.id.flHeader)
+        val llUgcInfo: LinearLayout = view.findViewById(R.id.llUgcInfo)
 
         fun switchHeaderAndUgcInfoVisibility() {
             if (ivPullDown.visibility == View.VISIBLE) {
@@ -169,7 +169,7 @@ class UgcDetailAdapter(val activity: UgcDetailActivity, var dataList: List<Commu
         }
     }
 
-    class PhotosAdapter(val dataList: List<String>, val ugcHolder: FollowCardViewHolder) : RecyclerView.Adapter<PhotosAdapter.ViewHolder>() {
+    class PhotosAdapter(val dataList: List<String>, private val ugcHolder: FollowCardViewHolder) : RecyclerView.Adapter<PhotosAdapter.ViewHolder>() {
 
         class ViewHolder(view: PhotoView) : RecyclerView.ViewHolder(view) {
             val photoView = view
