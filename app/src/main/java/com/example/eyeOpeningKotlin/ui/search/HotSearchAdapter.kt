@@ -17,12 +17,13 @@ import com.example.eyeOpeningKotlin.util.GlobalUtil
  *
  * @author driverSkr
  * @since  2023/10/20
+ * @codeReview 2023/11/7
  */
 class HotSearchAdapter(val fragment: SearchFragment,var dataList: List<String>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun getItemViewType(position: Int) = when (position) {
-        0 -> Const.ItemViewType.CUSTOM_HEADER
-        else -> HOT_SEARCH_TYPE
+        0 -> Const.ItemViewType.CUSTOM_HEADER /**头部标题**/
+        else -> HOT_SEARCH_TYPE /**热搜词**/
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {

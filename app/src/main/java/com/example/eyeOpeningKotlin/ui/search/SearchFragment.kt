@@ -35,6 +35,7 @@ import com.umeng.analytics.MobclickAgent
  *
  * @author driverSkr
  * @since  2023/10/20
+ * @codeReview 2023/11/7
  */
 class SearchFragment: BaseFragment() {
 
@@ -43,6 +44,7 @@ class SearchFragment: BaseFragment() {
     private val binding: FragmentSearchBinding
         get() = _binding!!
 
+    /**使用 Kotlin 的 by lazy 延迟初始化属性的方式，用于获取一个 PlaceViewModel 的实例**/
     private val viewModel by lazy { ViewModelProvider(this, InjectorUtil.getSearchViewModelFactory())[SearchViewModel::class.java] }
 
     private lateinit var adapter: HotSearchAdapter
@@ -54,11 +56,12 @@ class SearchFragment: BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.llSearch.visibleAlphaAnimation(500)
+        binding.llSearch.visibleAlphaAnimation(500) //显示view，带有渐显动画效果。
+        //设置TextView图标
         binding.etQuery.setDrawable(ContextCompat.getDrawable(activity, R.drawable.ic_search_gray_17dp),14f,14f)
         binding.etQuery.setOnEditorActionListener(EditorActionListener(activity,binding))
         binding.tvCancel.setOnClickListener {
-            hideSoftKeyboard()
+            hideSoftKeyboard()  //隐藏软键盘
             removeFragment(activity,this)
         }
         val layoutManager = LinearLayoutManager(activity)
@@ -86,9 +89,11 @@ class SearchFragment: BaseFragment() {
     @SuppressLint("NotifyDataSetChanged")
     private fun observe() {
         viewModel.dataListLiveData.observe(viewLifecycleOwner, Observer { result ->
+            //通过输入框打开软键盘
             binding.etQuery.showSoftKeyboard()
             val response = result.getOrNull()
             if (response == null) {
+                /**打印异常的堆栈信息，并提前返回，不继续处理数据**/
                 result.exceptionOrNull()?.printStackTrace()
                 return@Observer
             }
@@ -98,6 +103,7 @@ class SearchFragment: BaseFragment() {
             if (response.isNullOrEmpty() && viewModel.dataList.isNotEmpty()) {
                 return@Observer
             }
+            //清空 viewModel.dataList，准备填充新的数据
             viewModel.dataList.clear()
             viewModel.dataList.addAll(response)
             adapter.notifyDataSetChanged()

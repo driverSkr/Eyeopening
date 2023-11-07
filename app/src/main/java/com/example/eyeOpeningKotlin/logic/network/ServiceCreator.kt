@@ -27,21 +27,28 @@ object ServiceCreator {
     const val BASE_URL = "http://baobab.kaiyanapp.com/"
 
     val httpClient: OkHttpClient = OkHttpClient.Builder()
+        /**记录请求和响应日志**/
         .addInterceptor(LoggingInterceptor())
+        /**用于添加自定义请求头，例如模型信息、用户代理和修改时间**/
         .addInterceptor(HeaderInterceptor())
+        /**用于添加查询参数，例如设备信息、系统版本**/
         .addInterceptor(BasicParamsInterceptor())
         .build()
 
     private val builder = Retrofit.Builder()
         .baseUrl(BASE_URL)
+        /**如不添加.client配置，则Retrofit会生成一个默认的OkHttpClient实例**/
         .client(httpClient)
+        /**用于将响应转换为字符串**/
         .addConverterFactory(ScalarsConverterFactory.create())
+        /**用于将JSON响应转换为对象**/
         .addConverterFactory(GsonConverterFactory.create(GsonBuilder().registerTypeAdapterFactory(GsonTypeAdapterFactory()).create()))
 
     private val retrofit = builder.build()
 
     fun <T> create(serviceClass: Class<T>): T = retrofit.create(serviceClass)
 
+    /**记录请求和响应日志**/
     class LoggingInterceptor: Interceptor {
 
         @Throws(IOException::class)
@@ -62,6 +69,7 @@ object ServiceCreator {
         }
     }
 
+    /**用于添加自定义请求头，例如模型信息、用户代理和修改时间**/
     class HeaderInterceptor: Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
             val originalRequest = chain.request()
@@ -74,6 +82,7 @@ object ServiceCreator {
         }
     }
 
+    /**用于添加查询参数，例如设备信息、系统版本**/
     class BasicParamsInterceptor : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
             val originalRequest = chain.request()

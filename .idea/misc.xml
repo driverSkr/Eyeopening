@@ -67,7 +67,7 @@
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_about.xml" value="0.225" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_new_detail.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_new_detail.xml" value="0.2" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_open_source_projects.xml" value="0.225" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_setting.xml" value="0.2" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/activity_splash.xml" value="0.264" />
@@ -108,7 +108,7 @@
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_text_card_type_header_five.xml" value="0.4" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_text_card_type_header_four.xml" value="0.264" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_text_card_type_header_seven.xml" value="0.264" />
-        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_ugc_detail.xml" value="0.1" />
+        <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_ugc_detail.xml" value="0.2" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_ugc_selected_card_collection_type.xml" value="0.4" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/item_video_small_card_type.xml" value="0.4" />
         <entry key="..\:/androidProject/boGeStudyDemo/EyeopeningKotlin/app/src/main/res/layout/layout_auto_play_video_player.xml" value="0.10648148148148148" />

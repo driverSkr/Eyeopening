@@ -4,6 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.eyeOpeningKotlin.logic.MainPageRepository
 
+/**
+ * @codeReview 2023/11/7
+ */
 class SearchViewModelFactory(private val repository: MainPageRepository) : ViewModelProvider.NewInstanceFactory(){
 
     @Suppress("UNCHECKED_CAST")
