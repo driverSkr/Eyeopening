@@ -48,7 +48,6 @@ class CommendFragment : BaseFragment() {
      */
     val middleSpace = dp2px(3f)
 
-
     /**
      * 通过获取屏幕宽度来计算出每张图片最大的宽度。
      *
@@ -167,5 +166,4 @@ class CommendFragment : BaseFragment() {
 
         fun newInstance() = CommendFragment()
     }
-
 }

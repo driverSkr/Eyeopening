@@ -32,7 +32,6 @@ import com.shuyu.gsyvideoplayer.video.base.GSYVideoView
 import kotlinx.coroutines.*
 import kotlinx.parcelize.Parcelize
 
-
 /**
  * 视频详情界面。
  *
